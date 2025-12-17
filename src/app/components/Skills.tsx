@@ -4,11 +4,11 @@ import { Badge } from "./ui/badge";
 const skillCategories = [
   {
     title: "Mobile Frameworks",
-    skills: ["React Native", "Flutter", "Swift", "Kotlin"]
+    skills: ["Flutter", "Android"]
   },
   {
-    title: "Frontend",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Redux"]
+    title: "Languages",
+    skills: ["Dart", "Kotlin", "Java"]
   },
   {
     title: "Backend & Tools",

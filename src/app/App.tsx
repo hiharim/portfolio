@@ -1,4 +1,5 @@
 import { Hero } from "./components/Hero";
+import { Credentials } from "./components/Credentials";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { SideProjects } from "./components/SideProjects";
@@ -22,6 +23,9 @@ export default function App() {
               </a>
               <a href="#side-projects" className="text-sm hover:text-primary transition-colors">
                 Side Projects
+              </a>
+                <a href="#credentials" className="text-sm hover:text-primary transition-colors">
+                Credentials
               </a>
               <a href="#contact" className="text-sm hover:text-primary transition-colors">
                 Contact
@@ -54,7 +58,12 @@ export default function App() {
         </div>
         
         <Separator className="my-8" />
+
+          <div id="credentials">
+          <Credentials />
+        </div>
         
+        <Separator className="my-8" />
         <div id="contact">
           <Contact />
         </div>

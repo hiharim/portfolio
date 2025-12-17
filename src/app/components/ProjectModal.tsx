@@ -37,7 +37,9 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+      <DialogContent
+        className="sm:max-w-[900px] max-w-[95vw] max-h-[90vh] overflow-y-auto"
+      >
         <DialogHeader>
           <DialogTitle className="text-2xl">{project.title}</DialogTitle>
           <DialogDescription>{project.description}</DialogDescription>
@@ -50,7 +52,6 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"
-              query="mobile app"
             />
           </div>
 
@@ -147,7 +148,6 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                       src={screenshot}
                       alt={`${project.title} screenshot ${index + 1}`}
                       className="w-full h-full object-cover"
-                      query="mobile app"
                     />
                   </div>
                 ))}

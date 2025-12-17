@@ -22,23 +22,23 @@ export function Contact() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <Card>
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-2 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <Mail className="h-6 w-6 text-primary" />
-            </div>
-            <CardTitle className="text-base">Email</CardTitle>
-            <CardDescription>contact@example.com</CardDescription>
-          </CardHeader>
-        </Card>
-        
+        <Card className="pb-4">
+  <CardHeader className="text-center">
+    <div className="mx-auto mb-2 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+      <Mail className="h-6 w-6 text-primary" />
+    </div>
+    <CardTitle className="text-base">Email</CardTitle>
+    <CardDescription>hastein96@gmail.com</CardDescription>
+  </CardHeader>
+</Card>
+
         <Card>
           <CardHeader className="text-center">
             <div className="mx-auto mb-2 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
               <Github className="h-6 w-6 text-primary" />
             </div>
             <CardTitle className="text-base">GitHub</CardTitle>
-            <CardDescription>@yourusername</CardDescription>
+            <CardDescription>@hiharim</CardDescription>
           </CardHeader>
         </Card>
         
