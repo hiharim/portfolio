@@ -1,9 +1,10 @@
-import { Hero } from "./components/Hero";
-import { Credentials } from "./components/Credentials";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { SideProjects } from "./components/SideProjects";
 import { Contact } from "./components/Contact";
+import { Credentials } from "./components/Credentials";
+import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
+import { Resume } from "./components/Resume";
+import { SideProjects } from "./components/SideProjects";
+import { Skills } from "./components/Skills";
 import { Separator } from "./components/ui/separator";
 
 export default function App() {
@@ -15,6 +16,9 @@ export default function App() {
           <nav className="flex items-center justify-between">
             <h3 className="scroll-m-20">Portfolio</h3>
             <div className="flex gap-6">
+              <a href="#resume" className="text-sm hover:text-primary transition-colors">
+                Resume
+              </a>
               <a href="#skills" className="text-sm hover:text-primary transition-colors">
                 Skills
               </a>
@@ -24,7 +28,7 @@ export default function App() {
               <a href="#side-projects" className="text-sm hover:text-primary transition-colors">
                 Side Projects
               </a>
-                <a href="#credentials" className="text-sm hover:text-primary transition-colors">
+              <a href="#credentials" className="text-sm hover:text-primary transition-colors">
                 Credentials
               </a>
               <a href="#contact" className="text-sm hover:text-primary transition-colors">
@@ -38,31 +42,37 @@ export default function App() {
       {/* Main Content */}
       <main>
         <Hero />
-        
+
         <Separator className="my-8" />
-        
+
+        <div id="resume">
+          <Resume />
+        </div>
+
+        <Separator className="my-8" />
+
         <div id="skills">
           <Skills />
         </div>
-        
+
         <Separator className="my-8" />
-        
+
         <div id="projects">
           <Projects />
         </div>
-        
+
         <Separator className="my-8" />
-        
+
         <div id="side-projects">
           <SideProjects />
         </div>
-        
+
         <Separator className="my-8" />
 
-          <div id="credentials">
+        <div id="credentials">
           <Credentials />
         </div>
-        
+
         <Separator className="my-8" />
         <div id="contact">
           <Contact />
