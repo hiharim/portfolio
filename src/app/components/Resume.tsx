@@ -1,5 +1,7 @@
-import { Building2, MapPin } from "lucide-react";
+import { ArrowRight, Building2, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
 const experiences = [
@@ -44,7 +46,7 @@ export function Resume() {
                 </p>
             </div>
 
-            <div className="space-y-8 mb-20">
+            <div className="space-y-8 mb-12">
                 {experiences.map((exp, index) => (
                     <Card key={index} className="border-none shadow-sm bg-card hover:bg-accent/5 transition-colors">
                         <CardContent className="p-8">
@@ -93,6 +95,15 @@ export function Resume() {
                         </CardContent>
                     </Card>
                 ))}
+            </div>
+
+            <div className="flex justify-center">
+                <Button size="lg" asChild className="group">
+                    <Link to="/career">
+                        View Full Career Profile
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </Button>
             </div>
         </section>
     );

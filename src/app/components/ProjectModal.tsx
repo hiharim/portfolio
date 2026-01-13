@@ -1,5 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { CheckCircle2, ExternalLink, Github, Lightbulb, Target } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import {
@@ -18,9 +18,11 @@ interface ProjectModalProps {
     github: string;
     demo: string;
     fullDescription?: string;
-    features?: string[];
-    challenges?: string;
-    solution?: string;
+    problemSolvings?: {
+      problem: string;
+      solution: string;
+      conclusion: string;
+    }[];
     duration?: string;
     team?: string;
     rating?: string;
@@ -40,9 +42,9 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
       <DialogContent
         className="max-w-none w-[95vw] sm:max-w-[95vw] md:max-w-[90vw] lg:max-w-[1400px] h-[90vh] overflow-y-auto p-0 gap-0"
       >
-        <div className="flex flex-col lg:flex-row h-full">
+        <div className="flex flex-col lg:flex-row items-start">
           {/* Main Content - Left Side */}
-          <div className="flex-1 overflow-y-auto p-8 lg:p-12">
+          <div className="flex-1 p-8 lg:p-12">
             <div className="max-w-4xl">
               {/* Header */}
               <div className="mb-12">
@@ -55,71 +57,14 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 <DialogDescription className="text-xl text-muted-foreground leading-relaxed">
                   {project.description}
                 </DialogDescription>
-              </div>
-
-              {/* Screenshots Section */}
-              {project.screenshots && project.screenshots.length > 0 && (
-                <div className="mb-12">
-                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                    App Screenshots
-                  </h3>
-                  <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x scrollbar-hide">
-                    {project.screenshots.map((screenshot, index) => (
-                      <div key={index} className="flex-shrink-0 w-[240px] aspect-[9/19] overflow-hidden rounded-xl border bg-muted shadow-sm snap-center">
-                        <ImageWithFallback
-                          src={screenshot}
-                          alt={`${project.title} screenshot ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Full Description / Overview */}
-              {project.fullDescription && (
-                <div className="mb-12">
-                  <h3 className="text-xl font-bold mb-4">Project Overview</h3>
-                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                {project.fullDescription && (
+                  <p className="mt-4 text-muted-foreground leading-relaxed whitespace-pre-line">
                     {project.fullDescription}
                   </p>
-                </div>
-              )}
+                )}
+              </div>
 
-              {/* Features */}
-              {project.features && project.features.length > 0 && (
-                <div className="mb-12">
-                  <h3 className="text-xl font-bold mb-4">Key Features</h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 list-disc pl-5">
-                    {project.features.map((feature, i) => (
-                      <li key={i} className="text-muted-foreground leading-relaxed pl-1 marker:text-primary">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Challenges & Solution */}
-              {(project.challenges || project.solution) && (
-                <div className="mb-12 space-y-8">
-                  <div className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-bold mb-3">The Challenge</h3>
-                    <p className="text-muted-foreground leading-relaxed">{project.challenges || "구체적인 기술적 챌린지와 문제 해결 과정을 경험했습니다."}</p>
-                  </div>
-                  {project.solution && (
-                    <div>
-                      <h3 className="text-xl font-bold mb-3">The Solution</h3>
-                      <div className="bg-muted/50 p-6 rounded-xl text-sm leading-relaxed">
-                        <p className="text-muted-foreground">{project.solution}</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Architecture */}
+              {/* System Architecture (Data Flow) */}
               {project.architecture && (
                 <div className="mb-12">
                   <h3 className="text-xl font-bold mb-4">System Architecture</h3>
@@ -146,11 +91,95 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                   </ul>
                 </div>
               )}
+
+              {/* Problem Solving Steps - Redesigned */}
+              {project.problemSolvings && project.problemSolvings.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-xl font-bold mb-6">Problem Solving</h3>
+                  <div className="space-y-6">
+                    {project.problemSolvings.map((step, index) => (
+                      <div
+                        key={index}
+                        className="rounded-xl border bg-card overflow-hidden"
+                      >
+                        {/* Step Header */}
+                        <div className="px-6 py-4 bg-muted/30 border-b">
+                          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                            Case {String(index + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+
+                        {/* Step Content */}
+                        <div className="p-6 space-y-5">
+                          {/* Problem */}
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center">
+                              <Target className="w-4 h-4 text-destructive" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Challenge</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                                {step.problem}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Solution */}
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <Lightbulb className="w-4 h-4 text-primary" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Solution</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                                {step.solution}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Conclusion */}
+                          <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
+                              <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-500" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Result</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                                {step.conclusion}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* App Screenshots */}
+              {project.screenshots && project.screenshots.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                    App Screenshots
+                  </h3>
+                  <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x scrollbar-hide">
+                    {project.screenshots.map((screenshot, index) => (
+                      <div key={index} className="flex-shrink-0 w-[240px] aspect-[9/19] overflow-hidden rounded-xl border bg-muted shadow-sm snap-center">
+                        <ImageWithFallback
+                          src={screenshot}
+                          alt={`${project.title} screenshot ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Sidebar - Right Side */}
-          <div className="lg:w-[320px] lg:border-l bg-muted/10 p-8 lg:p-8 flex-shrink-0 lg:h-full lg:overflow-y-auto">
+          <div className="lg:w-[320px] lg:border-l bg-muted/10 p-8 lg:p-8 flex-shrink-0 sticky top-0 h-fit">
             <div className="sticky top-0 space-y-10">
 
               {/* Metadata */}
