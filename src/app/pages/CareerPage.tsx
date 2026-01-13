@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
-import { Separator } from "../components/ui/separator";
 
 export function CareerPage() {
     const contentRef = useRef<HTMLDivElement>(null);
@@ -50,10 +49,32 @@ export function CareerPage() {
                             />
                         </div>
                         <h1 className="text-3xl font-bold mb-2">하림 (Harim)</h1>
-                        <p className="text-muted-foreground text-lg">Senior Mobile Developer</p>
+                        <p className="text-xl text-muted-foreground mb-4">Mobile App Developer</p>
+                        <div className="flex gap-4 text-sm text-muted-foreground">
+                            <span>📧 email@example.com</span>
+                            <span>📱 010-1234-5678</span>
+                            <span>📍 Seoul, Korea</span>
+                        </div>
                     </div>
 
-                    <Separator className="my-8" />
+                    {/* Work Experience */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6 border-b pb-2">Work Experience</h2>
+                        <div className="space-y-8">
+                            <div>
+                                <div className="flex justify-between items-baseline mb-2">
+                                    <h3 className="text-lg font-bold">Company Name</h3>
+                                    <span className="text-sm text-muted-foreground">2023.01 - Present</span>
+                                </div>
+                                <p className="text-muted-foreground font-medium mb-2">Senior Flutter Developer</p>
+                                <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1">
+                                    <li>Led the migration of the legacy Android app to Flutter, reducing codebase size by 40%.</li>
+                                    <li>Implemented CI/CD pipelines using GitHub Actions, cutting deployment time by 50%.</li>
+                                    <li>Mentored 2 junior developers and conducted code reviews.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* Motivation */}
                     <section className="mb-12">
@@ -77,7 +98,7 @@ export function CareerPage() {
                     </section>
 
                     {/* Projects */}
-                    <section>
+                    <section className="mb-12">
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">주요 프로젝트</h2>
 
                         {/* Project 1 */}
@@ -112,6 +133,50 @@ export function CareerPage() {
                                 <li>Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현</li>
                             </ul>
                         </div>
+                    </section>
+
+                    {/* Education */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6 border-b pb-2">Education</h2>
+                        <div className="space-y-4">
+                            <div>
+                                <div className="flex justify-between items-baseline mb-1">
+                                    <h3 className="text-lg font-bold">University Name</h3>
+                                    <span className="text-sm text-muted-foreground">2016.03 - 2022.02</span>
+                                </div>
+                                <p className="text-muted-foreground">Bachelor of Computer Science</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Certifications */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6 border-b pb-2">Certifications</h2>
+                        <ul className="space-y-2">
+                            <li className="flex justify-between items-baseline">
+                                <span className="font-medium">Information Processing Engineer (정보처리기사)</span>
+                                <span className="text-sm text-muted-foreground">2022.06</span>
+                            </li>
+                            <li className="flex justify-between items-baseline">
+                                <span className="font-medium">SQLD (SQL Developer)</span>
+                                <span className="text-sm text-muted-foreground">2021.09</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    {/* Language Scores */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6 border-b pb-2">Languages</h2>
+                        <ul className="space-y-2">
+                            <li className="flex justify-between items-baseline">
+                                <span className="font-medium">OPIc</span>
+                                <span className="text-sm text-muted-foreground">IM2 (2023.05)</span>
+                            </li>
+                            <li className="flex justify-between items-baseline">
+                                <span className="font-medium">TOEIC</span>
+                                <span className="text-sm text-muted-foreground">850 (2022.12)</span>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
