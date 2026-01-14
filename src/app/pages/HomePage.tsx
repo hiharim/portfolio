@@ -31,7 +31,7 @@ export function HomePage() {
                             </Link>
                             <div className="w-px h-4 bg-border" />
                             <button onClick={() => handleScroll('resume')} className="text-sm hover:text-primary transition-colors">
-                                Resume
+                                Experience
                             </button>
                             <button onClick={() => handleScroll('skills')} className="text-sm hover:text-primary transition-colors">
                                 Skills

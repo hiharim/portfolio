@@ -48,11 +48,10 @@ export function CareerPage() {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <h1 className="text-3xl font-bold mb-2">하림 (Harim)</h1>
+                        <h1 className="text-3xl font-bold mb-2">조하림 (Harim Cho)</h1>
                         <p className="text-xl text-muted-foreground mb-4">Mobile App Developer</p>
                         <div className="flex gap-4 text-sm text-muted-foreground">
-                            <span>📧 email@example.com</span>
-                            <span>📱 010-1234-5678</span>
+                            <span>📧 hastein96@gmail.com</span>
                             <span>📍 Seoul, Korea</span>
                         </div>
                     </div>

@@ -6,9 +6,9 @@ import { Card, CardContent } from "./ui/card";
 
 const experiences = [
     {
-        company: "TECH COMPANY A",
-        position: "Senior Flutter Developer",
-        period: "2023.01 - Present",
+        company: "(주)비단팝팝",
+        position: "Flutter Developer",
+        period: "2024.10 - Present",
         location: "Seoul, South Korea",
         type: "Full-time",
         description: "핀테크 모바일 앱 개발 리딩 및 아키텍처 설계",
@@ -20,10 +20,10 @@ const experiences = [
         skills: ["Flutter", "Dart", "Firebase", "CI/CD"]
     },
     {
-        company: "STARTUP B",
-        position: "Android Developer",
-        period: "2021.03 - 2022.12",
-        location: "Busan, South Korea",
+        company: "주식회사 콰가(quaggainc.)",
+        position: "Android Developer & Flutter Developer",
+        period: "2022.03 - 2023.06",
+        location: "Seoul, South Korea",
         type: "Full-time",
         description: "초기 멤버로서 서비스 출시부터 운영까지 전과정 참여",
         achievements: [
@@ -31,7 +31,7 @@ const experiences = [
             "실시간 채팅 기능 구현 및 안정화",
             "레거시 Java 코드 100% Kotlin 마이그레이션"
         ],
-        skills: ["Android", "Kotlin", "Java", "Socket.io"]
+        skills: ["Android", "Kotlin", "Flutter", "Dart", "Socket.io"]
     }
 ];
 

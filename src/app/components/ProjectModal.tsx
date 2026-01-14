@@ -40,7 +40,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="max-w-none w-[95vw] sm:max-w-[95vw] md:max-w-[90vw] lg:max-w-[1400px] h-[90vh] overflow-y-auto p-0 gap-0"
+        className="max-w-none w-[95vw] sm:max-w-[95vw] md:max-w-[90vw] lg:max-w-[1400px] h-[90vh] overflow-y-auto p-0 gap-0 data-[state=closed]:duration-0 data-[state=closed]:animate-none"
       >
         <div className="flex flex-col lg:flex-row items-start">
           {/* Main Content - Left Side */}
