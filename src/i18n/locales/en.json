@@ -1,0 +1,115 @@
+{
+    "nav": {
+        "backToPortfolio": "Back to Portfolio",
+        "downloadPDF": "Download PDF",
+        "portfolio": "Portfolio",
+        "careerDescription": "Career Description",
+        "experience": "Experience",
+        "skills": "Skills",
+        "projects": "Projects",
+        "sideProjects": "Side Projects",
+        "credentials": "Credentials",
+        "contact": "Contact"
+    },
+    "footer": {
+        "copyright": "© 2024 Mobile App Developer Portfolio. All rights reserved."
+    },
+    "profile": {
+        "name": "Harim Cho (조하림)",
+        "title": "Mobile App Developer",
+        "email": "hastein96@gmail.com",
+        "location": "Seoul, Korea"
+    },
+    "sections": {
+        "workExperience": "Work Experience",
+        "motivation": "Motivation",
+        "selfIntroduction": "About Me",
+        "projects": "Key Projects",
+        "education": "Education",
+        "certifications": "Certifications",
+        "languages": "Languages"
+    },
+    "workExperience": {
+        "company": "Company Name",
+        "period": "2023.01 - Present",
+        "position": "Senior Flutter Developer",
+        "achievements": [
+            "Led the migration of the legacy Android app to Flutter, reducing codebase size by 40%.",
+            "Implemented CI/CD pipelines using GitHub Actions, cutting deployment time by 50%.",
+            "Mentored 2 junior developers and conducted code reviews."
+        ]
+    },
+    "motivation": {
+        "content": "I have a deep passion for delivering better value to users through technology.\nI find fulfillment in optimizing user experiences and building stable services in the constantly evolving mobile ecosystem.\nI am applying to grow alongside your company's innovative vision and contribute to the success of your services by leveraging my technical expertise."
+    },
+    "selfIntroduction": {
+        "content": "As a mobile developer with 6 years of experience, I specialize in Flutter and Native Android development.\nI have proactively led projects in various environments, from startups to growing organizations,\nwith particular strengths in architecture design aimed at improving code quality and development productivity.\nI value smooth communication with team members and want to contribute to creating a culture of mutual growth."
+    },
+    "projects": {
+        "poppop": {
+            "title": "1. PopPop - Gift Card Trading Platform",
+            "period": "2024.10 ~ (Flutter)",
+            "achievements": [
+                "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
+                "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic"
+            ]
+        },
+        "cpass": {
+            "title": "2. CPASS - Comprehensive Fitness & Wallet App",
+            "period": "2023.01 ~ 2024.09 (Flutter / Android)",
+            "achievements": [
+                "Migrated existing native app to Flutter, improving development productivity by 200%",
+                "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Established foundation for global service expansion by building multi-language support (i18n) system"
+            ]
+        },
+        "brk": {
+            "title": "3. BRK Foundation - Donation Platform",
+            "period": "2022.05 ~ 2022.08 (Flutter)",
+            "achievements": [
+                "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
+                "Ensured app usability even in unstable network environments by introducing offline-first architecture",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors"
+            ]
+        }
+    },
+    "education": {
+        "university": "University Name",
+        "period": "2016.03 - 2022.02",
+        "degree": "Bachelor of Computer Science"
+    },
+    "certifications": {
+        "items": [
+            {
+                "name": "Information Processing Engineer (정보처리기사)",
+                "date": "2022.06"
+            },
+            {
+                "name": "SQLD (SQL Developer)",
+                "date": "2021.09"
+            }
+        ]
+    },
+    "languageScores": {
+        "items": [
+            {
+                "name": "OPIc",
+                "score": "IM2 (2023.05)"
+            },
+            {
+                "name": "TOEIC",
+                "score": "850 (2022.12)"
+            }
+        ]
+    }
+}
