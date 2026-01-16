@@ -1,9 +1,9 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
+import { ProjectModal } from "./ProjectModal";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ExternalLink, Github } from "lucide-react";
-import { ProjectModal } from "./ProjectModal";
-import { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 const sideProjects = [
   {
@@ -21,7 +21,8 @@ const sideProjects = [
       "다크모드 지원"
     ],
     duration: "2주",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   },
   {
     title: "Todo Manager",
@@ -38,7 +39,8 @@ const sideProjects = [
       "완료율 통계"
     ],
     duration: "3주",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   },
   {
     title: "Recipe Finder",
@@ -55,7 +57,8 @@ const sideProjects = [
       "레시피 단계별 가이드"
     ],
     duration: "1개월",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   },
   {
     title: "Expense Tracker",
@@ -72,7 +75,8 @@ const sideProjects = [
       "영수증 사진 저장"
     ],
     duration: "3주",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   },
   {
     title: "Quote Generator",
@@ -89,7 +93,8 @@ const sideProjects = [
       "다양한 카테고리 (동기부여, 성공, 사랑 등)"
     ],
     duration: "2주",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   },
   {
     title: "Music Player",
@@ -106,7 +111,8 @@ const sideProjects = [
       "슬립 타이머 기능"
     ],
     duration: "1개월",
-    team: "개인 프로젝트"
+    team: "개인 프로젝트",
+    contribution: "100%"
   }
 ];
 
@@ -129,8 +135,8 @@ export function SideProjects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sideProjects.map((project) => (
-          <Card 
-            key={project.title} 
+          <Card
+            key={project.title}
             className="flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
             onClick={() => handleProjectClick(project)}
           >
@@ -147,9 +153,9 @@ export function SideProjects() {
                 ))}
               </div>
               <div className="flex gap-2">
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="flex-1 h-8"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -161,9 +167,9 @@ export function SideProjects() {
                     Demo
                   </a>
                 </Button>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="flex-1 h-8"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -181,7 +187,7 @@ export function SideProjects() {
         ))}
       </div>
 
-      <ProjectModal 
+      <ProjectModal
         project={selectedProject}
         open={isModalOpen}
         onOpenChange={setIsModalOpen}

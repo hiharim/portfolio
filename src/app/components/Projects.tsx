@@ -35,6 +35,7 @@ const projects = [
     ],
     duration: "2024.10 ~",
     team: "2명 (Flutter 개발자)",
+    contribution: "100%",
     rating: "4.8/5.0",
     screenshots: [
       "https://images.unsplash.com/photo-1729860649884-40ec104f9dfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBhcHB8ZW58MXx8fHwxNzY1ODczNDM1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -77,6 +78,7 @@ const projects = [
     ],
     duration: "4개월",
     team: "2명 (Flutter 개발자 2명)",
+    contribution: "80%",
     rating: "4.6/5.0",
     screenshots: [
       "https://images.unsplash.com/photo-1748280621226-91f9530fc329?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwd29ya291dCUyMGFwcHxlbnwxfHx8fDE3NjU4NDA3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -118,6 +120,7 @@ const projects = [
     ],
     duration: "3개월",
     team: "2명 (Flutter 개발자)",
+    contribution: "70%",
     rating: "4.7/5.0",
     screenshots: [
       "https://images.unsplash.com/photo-1610484826967-09c5720778c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZ3xlbnwxfHx8fDE3NjU4NDIxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -159,6 +162,7 @@ const projects = [
     ],
     duration: "7개월",
     team: "1명 (Android 개발자)",
+    contribution: "100%",
     rating: "4.5/5.0",
     screenshots: [
       "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",

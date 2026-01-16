@@ -75,32 +75,25 @@ export function CareerPage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">{t('sections.workExperience')}</h2>
                         <div className="space-y-8">
-                            <div>
-                                <div className="flex justify-between items-baseline mb-2">
-                                    <h3 className="text-lg font-bold">{t('workExperience.company')}</h3>
-                                    <span className="text-sm text-muted-foreground">{t('workExperience.period')}</span>
-                                </div>
-                                <p className="text-muted-foreground font-medium mb-2">{t('workExperience.position')}</p>
-                                <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1">
-                                    {(t('workExperience.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
-                                        <li key={index}>{achievement}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="space-y-8">
-                                <div>
+                            {(t('workExperience', { returnObjects: true }) as Array<{
+                                company: string;
+                                period: string;
+                                position: string;
+                                achievements: string[];
+                            }>).map((job, jobIndex) => (
+                                <div key={jobIndex}>
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold">{t('workExperience.company')}</h3>
-                                        <span className="text-sm text-muted-foreground">{t('workExperience.period')}</span>
+                                        <h3 className="text-lg font-bold">{job.company}</h3>
+                                        <span className="text-sm text-muted-foreground">{job.period}</span>
                                     </div>
-                                    <p className="text-muted-foreground font-medium mb-2">{t('workExperience.position')}</p>
+                                    <p className="text-muted-foreground font-medium mb-2">{job.position}</p>
                                     <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1">
-                                        {(t('workExperience.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
+                                        {job.achievements.map((achievement, index) => (
                                             <li key={index}>{achievement}</li>
                                         ))}
                                     </ul>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </section>
 
@@ -118,7 +111,13 @@ export function CareerPage() {
 
                         {/* Project 1 */}
                         <div className="mb-8 break-inside-avoid">
-                            <h3 className="text-xl font-bold mb-2">{t('projects.poppop.title')}</h3>
+                            <div className="flex justify-between items-baseline mb-2">
+                                <h3 className="text-xl font-bold">{t('projects.poppop.title')}</h3>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-muted-foreground">기여도</span>
+                                    <span className="text-sm font-semibold text-primary">{t('projects.poppop.contribution')}</span>
+                                </div>
+                            </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.poppop.period')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.poppop.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
@@ -129,7 +128,13 @@ export function CareerPage() {
 
                         {/* Project 2 */}
                         <div className="mb-8 break-inside-avoid">
-                            <h3 className="text-xl font-bold mb-2">{t('projects.cpass.title')}</h3>
+                            <div className="flex justify-between items-baseline mb-2">
+                                <h3 className="text-xl font-bold">{t('projects.cpass.title')}</h3>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-muted-foreground">기여도</span>
+                                    <span className="text-sm font-semibold text-primary">{t('projects.cpass.contribution')}</span>
+                                </div>
+                            </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.cpass.period')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.cpass.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
@@ -139,8 +144,14 @@ export function CareerPage() {
                         </div>
 
                         {/* Project 3 */}
-                        <div className="break-inside-avoid">
-                            <h3 className="text-xl font-bold mb-2">{t('projects.brk.title')}</h3>
+                        <div className="mb-8 break-inside-avoid">
+                            <div className="flex justify-between items-baseline mb-2">
+                                <h3 className="text-xl font-bold">{t('projects.brk.title')}</h3>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-muted-foreground">기여도</span>
+                                    <span className="text-sm font-semibold text-primary">{t('projects.brk.contribution')}</span>
+                                </div>
+                            </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.brk.period')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.brk.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
@@ -148,6 +159,24 @@ export function CareerPage() {
                                 ))}
                             </ul>
                         </div>
+
+                        {/* Project 4 */}
+                        <div className="break-inside-avoid">
+                            <div className="flex justify-between items-baseline mb-2">
+                                <h3 className="text-xl font-bold">{t('projects.digiLab.title')}</h3>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-muted-foreground">기여도</span>
+                                    <span className="text-sm font-semibold text-primary">{t('projects.digiLab.contribution')}</span>
+                                </div>
+                            </div>
+                            <p className="text-sm text-muted-foreground mb-3">{t('projects.digiLab.period')}</p>
+                            <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                                {(t('projects.digiLab.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
+                                    <li key={index}>{achievement}</li>
+                                ))}
+                            </ul>
+                        </div>
+
                     </section>
 
                     {/* Education */}

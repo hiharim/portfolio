@@ -25,6 +25,7 @@ interface ProjectModalProps {
     }[];
     duration?: string;
     team?: string;
+    contribution?: string;
     rating?: string;
     screenshots?: string[];
     architecture?: string;
@@ -200,6 +201,13 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                   <div className="border-b pb-6">
                     <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">TEAM SIZE</p>
                     <p className="font-medium">{project.team}</p>
+                  </div>
+                )}
+
+                {project.contribution && (
+                  <div className="border-b pb-6">
+                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">CONTRIBUTION</p>
+                    <span className="text-2xl font-bold text-primary">{project.contribution}</span>
                   </div>
                 )}
 

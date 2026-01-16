@@ -29,16 +29,28 @@
         "certifications": "Certifications",
         "languages": "Languages"
     },
-    "workExperience": {
-        "company": "Company Name",
-        "period": "2023.01 - Present",
-        "position": "Senior Flutter Developer",
-        "achievements": [
-            "Led the migration of the legacy Android app to Flutter, reducing codebase size by 40%.",
-            "Implemented CI/CD pipelines using GitHub Actions, cutting deployment time by 50%.",
-            "Mentored 2 junior developers and conducted code reviews."
-        ]
-    },
+    "workExperience": [
+        {
+            "company": "Company Name 1",
+            "period": "2023.01 - Present",
+            "position": "Senior Flutter Developer",
+            "achievements": [
+                "Achievement 1",
+                "Achievement 2",
+                "Achievement 3"
+            ]
+        },
+        {
+            "company": "Company Name 2",
+            "period": "2021.01 - 2022.12",
+            "position": "Flutter Developer",
+            "achievements": [
+                "Achievement 1",
+                "Achievement 2",
+                "Achievement 3"
+            ]
+        }
+    ],
     "motivation": {
         "content": "I have a deep passion for delivering better value to users through technology.\nI find fulfillment in optimizing user experiences and building stable services in the constantly evolving mobile ecosystem.\nI am applying to grow alongside your company's innovative vision and contribute to the success of your services by leveraging my technical expertise."
     },
@@ -49,6 +61,7 @@
         "poppop": {
             "title": "1. PopPop - Gift Card Trading Platform",
             "period": "2024.10 ~ (Flutter)",
+            "contribution": "100%",
             "achievements": [
                 "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
                 "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
@@ -61,6 +74,7 @@
         "cpass": {
             "title": "2. CPASS - Comprehensive Fitness & Wallet App",
             "period": "2023.01 ~ 2024.09 (Flutter / Android)",
+            "contribution": "80%",
             "achievements": [
                 "Migrated existing native app to Flutter, improving development productivity by 200%",
                 "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
@@ -73,6 +87,7 @@
         "brk": {
             "title": "3. BRK Foundation - Donation Platform",
             "period": "2022.05 ~ 2022.08 (Flutter)",
+            "contribution": "70%",
             "achievements": [
                 "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
                 "Ensured app usability even in unstable network environments by introducing offline-first architecture",
@@ -80,6 +95,19 @@
                 "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
                 "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
                 "Implemented robust error handling and retry logic using Retrofit and Dio interceptors"
+            ]
+        },
+        "digiLab": {
+            "title": "DigiLab",
+            "period": "2022.02 ~ 2022.08 (Android)",
+            "contribution": "90%",
+            "achievements": [
+                "기존 네이티브 앱을 Flutter로 마이그레이션하여 개발 생산성 200% 향상",
+                "Socket.io 기반 실시간 채팅 시스템 구축 및 오프라인 메시지 큐잉 구현으로 데이터 유실 방지",
+                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
+                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
+                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
+                "다국어 지원(i18n) 시스템 구축으로 글로벌 서비스 확장 기반 마련"
             ]
         }
     },
