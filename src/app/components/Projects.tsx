@@ -10,12 +10,16 @@ const projects = [
   {
     title: "팝팝",
     description: "기프트카드 거래 및 커머스 앱",
-    image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzY1ODQ5MjIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: `${import.meta.env.BASE_URL}images/projects/poppop/poppop_1.jpeg`,
     tags: ["Flutter", "Firebase", "riverpod", "goRouter", "mockito"],
     github: "#",
     demo: "#",
     fullDescription: "사용자들이 기프트카드를 구매하고, 교환하고, 선물할 수 있는 플랫폼",
-
+    screenshots: [
+      `${import.meta.env.BASE_URL}images/projects/poppop/poppop_1.jpeg`,
+      `${import.meta.env.BASE_URL}images/projects/poppop/poppop_2.jpeg`,
+      `${import.meta.env.BASE_URL}images/projects/poppop/poppop_3.jpeg`
+    ],
     problemSolvings: [
       {
         problem: "기존 MVC 패턴에서는 화면과 비즈니스 로직이 강하게 결합되어 있어, 결제 로직 수정 시 UI 코드까지 영향을 받는 문제가 있었습니다.",
@@ -37,12 +41,6 @@ const projects = [
     team: "2명 (Flutter 개발자)",
     contribution: "100%",
     rating: "4.8/5.0",
-    screenshots: [
-      "https://images.unsplash.com/photo-1729860649884-40ec104f9dfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBhcHB8ZW58MXx8fHwxNzY1ODczNDM1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzY1ODQ5MjIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXltZW50JTIwYXBwfGVufDF8fHx8MTc2NTk1MTIzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    ],
-    architecture: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     contributions: [
       "Riverpod을 활용한 전역 상태 관리 및 비즈니스 로직 분리",
       "GoRouter를 이용한 딥링크 처리 및 네비게이션 구조 설계",
@@ -53,7 +51,7 @@ const projects = [
   {
     title: "CPASS",
     description: "기존 네이티브 안드로이드 앱을 Flutter로 재개발하여 출시 및 디자인 개편, 채팅, 코인 거래 등 커뮤니티 기능을 추가하여 리뉴얼",
-    image: "https://images.unsplash.com/photo-1634403665481-74948d815f03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwbW9ja3VwfGVufDF8fHx8MTc2NTg3Mzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: `${import.meta.env.BASE_URL}images/projects/cpass/cpass_1.png`,
     tags: ["Flutter", "riverpod", "dio", "Hive", "Dart"],
     github: "#",
     demo: "#",
@@ -81,10 +79,10 @@ const projects = [
     contribution: "80%",
     rating: "4.6/5.0",
     screenshots: [
-      "https://images.unsplash.com/photo-1748280621226-91f9530fc329?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwd29ya291dCUyMGFwcHxlbnwxfHx8fDE3NjU4NDA3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "https://images.unsplash.com/photo-1634403665481-74948d815f03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwbW9ja3VwfGVufDF8fHx8MTc2NTg3Mzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      `${import.meta.env.BASE_URL}images/projects/cpass/cpass_1.png`,
+      `${import.meta.env.BASE_URL}images/projects/cpass/cpass_2.png`,
+      `${import.meta.env.BASE_URL}images/projects/cpass/cpass_3.png`
     ],
-    architecture: "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcHAlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     contributions: [
       "기존 Android 네이티브 앱을 Flutter로 마이그레이션",
       "WebSocket을 활용한 실시간 채팅 기능 구현",
@@ -95,7 +93,7 @@ const projects = [
   {
     title: "BRK Foundation",
     description: "코인으로 기부 기능과 기부 금액 집계 기능을 제공하는 필리핀 기부 단체 NGO 재단 앱",
-    image: "https://images.unsplash.com/photo-1758786977080-a5e60a3f843c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpb3MlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY1OTQwNDMxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: `${import.meta.env.BASE_URL}images/projects/brk/brk_1.jpg`,
     tags: ["Flutter", "riverpod", "Dart", "retrofit"],
     github: "#",
     demo: "#",
@@ -123,10 +121,10 @@ const projects = [
     contribution: "70%",
     rating: "4.7/5.0",
     screenshots: [
-      "https://images.unsplash.com/photo-1610484826967-09c5720778c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZ3xlbnwxfHx8fDE3NjU4NDIxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "https://images.unsplash.com/photo-1758786977080-a5e60a3f843c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpb3MlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY1OTQwNDMxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      `${import.meta.env.BASE_URL}images/projects/brk/brk_1.jpg`,
+      `${import.meta.env.BASE_URL}images/projects/brk/brk_2.jpg`,
+      `${import.meta.env.BASE_URL}images/projects/brk/brk_3.jpg`
     ],
-    architecture: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     contributions: [
       "Retrofit을 이용한 RESTful API 통신 모듈 설계",
       "Google Maps API 연동 및 커스텀 마커 클러스터링 구현",
@@ -135,9 +133,9 @@ const projects = [
     ]
   },
   {
-    title: "CPASS",
+    title: "DigiLab",
     description: "지갑 생성, 송금, 스왑, QR 결제 등의 전반적인 코인 월렛 기능을 제공하는 블록체인 월렛",
-    image: "https://images.unsplash.com/photo-1595675024853-0f3ec9098ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcHAlMjBkZXZlbG9wbWVudCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjU4NjkyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: `${import.meta.env.BASE_URL}images/projects/digilab/digilab_1.jpg`,
     tags: ["Android", "Kotlin", "MVVM", "MPAndroidChart", "Retrofit2", "Coroutine"],
     github: "#",
     demo: "#",
@@ -165,10 +163,10 @@ const projects = [
     contribution: "100%",
     rating: "4.5/5.0",
     screenshots: [
-      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      "https://images.unsplash.com/photo-1595675024853-0f3ec9098ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcHAlMjBkZXZlbG9wbWVudCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjU4NjkyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      `${import.meta.env.BASE_URL}images/projects/digilab/digilab_1.jpg`,
+      `${import.meta.env.BASE_URL}images/projects/digilab/digilab_2.jpg`,
+      `${import.meta.env.BASE_URL}images/projects/digilab/digilab_3.jpg`
     ],
-    architecture: "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcHAlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjU5NDU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     contributions: [
       "MVVM 아키텍처 패턴 도입으로 유지보수성 향상",
       "Coroutine을 활용한 비동기 작업 처리 및 UI 스레드 최적화",

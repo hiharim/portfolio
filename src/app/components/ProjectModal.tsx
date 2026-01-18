@@ -165,11 +165,11 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                   </h3>
                   <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x scrollbar-hide">
                     {project.screenshots.map((screenshot, index) => (
-                      <div key={index} className="flex-shrink-0 w-[240px] aspect-[9/19] overflow-hidden rounded-xl border bg-muted shadow-sm snap-center">
+                      <div key={index} className="flex-shrink-0 w-[240px] max-h-[600px] overflow-y-auto rounded-xl border bg-muted shadow-sm snap-center">
                         <ImageWithFallback
                           src={screenshot}
                           alt={`${project.title} screenshot ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
                       </div>
                     ))}

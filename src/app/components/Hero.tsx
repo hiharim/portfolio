@@ -9,10 +9,10 @@ export function Hero() {
       <div className="flex flex-col items-center text-center space-y-4">
         {/* 프로필 사진 */}
         <Avatar className="w-32 h-32 mb-4 border-4 border-background shadow-xl">
-          <AvatarImage src="/profile.jpg" alt="조하림" />
+          <AvatarImage src="images/hero.gif" alt="조하림" />
           <AvatarFallback className="text-2xl">조하림</AvatarFallback>
         </Avatar>
-        
+
         <Badge variant="secondary" className="mb-2">Mobile App Developer</Badge>
         <h1>안녕하세요, 조하림입니다</h1>
         <p className="max-w-2xl text-muted-foreground">

@@ -62,6 +62,7 @@
             "title": "1. PopPop - Gift Card Trading Platform",
             "period": "2024.10 ~ (Flutter)",
             "contribution": "100%",
+            "description": "C2C platform for secure gift card trading between users",
             "achievements": [
                 "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
                 "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
@@ -75,6 +76,7 @@
             "title": "2. CPASS - Comprehensive Fitness & Wallet App",
             "period": "2023.01 ~ 2024.09 (Flutter / Android)",
             "contribution": "80%",
+            "description": "Blockchain-based cryptocurrency wallet and payment service",
             "achievements": [
                 "Migrated existing native app to Flutter, improving development productivity by 200%",
                 "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
@@ -88,6 +90,7 @@
             "title": "3. BRK Foundation - Donation Platform",
             "period": "2022.05 ~ 2022.08 (Flutter)",
             "contribution": "70%",
+            "description": "Regional donation project matching and management platform for Philippines",
             "achievements": [
                 "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
                 "Ensured app usability even in unstable network environments by introducing offline-first architecture",
@@ -101,6 +104,7 @@
             "title": "DigiLab",
             "period": "2022.02 ~ 2022.08 (Android)",
             "contribution": "90%",
+            "description": "Mobile wallet application for digital asset management and trading",
             "achievements": [
                 "기존 네이티브 앱을 Flutter로 마이그레이션하여 개발 생산성 200% 향상",
                 "Socket.io 기반 실시간 채팅 시스템 구축 및 오프라인 메시지 큐잉 구현으로 데이터 유실 방지",

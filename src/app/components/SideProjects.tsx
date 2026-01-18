@@ -7,20 +7,26 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 
 const sideProjects = [
   {
-    title: "Weather Widget",
-    description: "실시간 날씨 정보를 제공하는 간단한 위젯 앱",
-    image: "https://images.unsplash.com/photo-1569693799105-4eb645d89aea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0fGVufDF8fHx8MTc2NTg3NjExMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["React Native", "OpenWeather API"],
+    title: "SingTogether",
+    description: "노래방 앱",
+    image: `${import.meta.env.BASE_URL}images/projects/singtogether/sing_1.png`,
+    tags: ["Flutter", "Audio", "UI/UX"],
     github: "#",
     demo: "#",
-    fullDescription: "현재 위치 기반의 실시간 날씨 정보를 보여주는 간단하지만 유용한 위젯 앱입니다.",
-    features: [
-      "GPS 기반 현재 위치 날씨 표시",
-      "5일 예보 제공",
-      "시간별 날씨 변화 그래프",
-      "다크모드 지원"
+    fullDescription: "노래방 기능을 제공하는 모바일 앱입니다.",
+    screenshots: [
+      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_1.png`,
+      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_2.png`,
+      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_3.png`,
+      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_4.png`
     ],
-    duration: "2주",
+    features: [
+      "노래 검색 및 재생",
+      "녹음 기능",
+      "점수 시스템",
+      "플레이리스트 관리"
+    ],
+    duration: "1개월",
     team: "개인 프로젝트",
     contribution: "100%"
   },

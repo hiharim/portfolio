@@ -50,9 +50,10 @@ export function CareerPage() {
                         <div className="flex-shrink-0">
                             <div className="w-40 h-40 rounded-lg overflow-hidden border-4 border-muted bg-muted">
                                 <ImageWithFallback
-                                    src="" // User can add their photo URL here
+                                    src={t('profile.photo')}
                                     alt="Profile Photo"
                                     className="w-full h-full object-cover"
+                                    style={{ objectPosition: 'center 20%' }}
                                 />
                             </div>
                         </div>
@@ -119,6 +120,7 @@ export function CareerPage() {
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.poppop.period')}</p>
+                            <p className="text-sm text-foreground/80 mb-3 italic">{t('projects.poppop.description')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.poppop.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
                                     <li key={index}>{achievement}</li>
@@ -136,6 +138,7 @@ export function CareerPage() {
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.cpass.period')}</p>
+                            <p className="text-sm text-foreground/80 mb-3 italic">{t('projects.cpass.description')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.cpass.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
                                     <li key={index}>{achievement}</li>
@@ -153,6 +156,7 @@ export function CareerPage() {
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.brk.period')}</p>
+                            <p className="text-sm text-foreground/80 mb-3 italic">{t('projects.brk.description')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.brk.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
                                     <li key={index}>{achievement}</li>
@@ -170,6 +174,7 @@ export function CareerPage() {
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground mb-3">{t('projects.digiLab.period')}</p>
+                            <p className="text-sm text-foreground/80 mb-3 italic">{t('projects.digiLab.description')}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                                 {(t('projects.digiLab.achievements', { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
                                     <li key={index}>{achievement}</li>
