@@ -1,4 +1,4 @@
-import { CheckCircle2, ExternalLink, Github, Lightbulb, Target } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -92,64 +92,40 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                   </ul>
                 </div>
               )}
-
-              {/* Problem Solving Steps - Redesigned */}
+              {/* Problem Solving - Compact List Style */}
               {project.problemSolvings && project.problemSolvings.length > 0 && (
                 <div className="mb-12">
                   <h3 className="text-xl font-bold mb-6">Problem Solving</h3>
                   <div className="space-y-6">
                     {project.problemSolvings.map((step, index) => (
-                      <div
-                        key={index}
-                        className="rounded-xl border bg-card overflow-hidden"
-                      >
-                        {/* Step Header */}
-                        <div className="px-6 py-4 bg-muted/30 border-b">
-                          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                            Case {String(index + 1).padStart(2, '0')}
-                          </span>
-                        </div>
+                      <div key={index} className="relative pl-4 border-l-2 border-border hover:border-primary/50 transition-colors">
+                        <div className="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-primary/60" />
 
-                        {/* Step Content */}
-                        <div className="p-6 space-y-5">
-                          {/* Problem */}
-                          <div className="flex gap-4">
-                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center">
-                              <Target className="w-4 h-4 text-destructive" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Challenge</h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                                {step.problem}
-                              </p>
-                            </div>
+                        <div className="space-y-1.5">
+                          <div className="flex items-baseline gap-3">
+                            <span className="text-[10px] font-medium text-muted-foreground/60 uppercase tracking-widest shrink-0">
+                              #{String(index + 1).padStart(2, '0')}
+                            </span>
+                            <p className="text-base font-medium leading-relaxed whitespace-pre-line">
+                              {step.problem}
+                            </p>
                           </div>
 
-                          {/* Solution */}
-                          <div className="flex gap-4">
-                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                              <Lightbulb className="w-4 h-4 text-primary" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Solution</h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                                {step.solution}
-                              </p>
-                            </div>
+                          <div className="flex items-baseline gap-3 pl-8">
+                            <span className="text-[10px] text-muted-foreground/50 shrink-0">→</span>
+                            <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+                              {step.solution}
+                            </p>
                           </div>
 
-                          {/* Conclusion */}
-                          <div className="flex gap-4">
-                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
-                              <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-500" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-semibold text-foreground mb-1.5">Result</h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                          {step.conclusion && (
+                            <div className="flex items-baseline gap-3 pl-8">
+                              <span className="text-[10px] text-primary/60 shrink-0">✓</span>
+                              <p className="text-base text-muted-foreground/80 leading-relaxed whitespace-pre-line">
                                 {step.conclusion}
                               </p>
                             </div>
-                          </div>
+                          )}
                         </div>
                       </div>
                     ))}

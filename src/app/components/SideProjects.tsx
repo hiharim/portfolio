@@ -20,6 +20,7 @@ const sideProjects = [
       `${import.meta.env.BASE_URL}images/projects/singtogether/sing_3.png`,
       `${import.meta.env.BASE_URL}images/projects/singtogether/sing_4.png`
     ],
+    architecture: `${import.meta.env.BASE_URL}images/projects/singtogether/singtogether.svg`,
     features: [
       "노래 검색 및 재생",
       "녹음 기능",

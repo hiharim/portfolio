@@ -78,6 +78,7 @@ const projects = [
     team: "2명 (Flutter 개발자 2명)",
     contribution: "80%",
     rating: "4.6/5.0",
+    architecture: `${import.meta.env.BASE_URL}images/projects/cpass/cpass.svg`,
     screenshots: [
       `${import.meta.env.BASE_URL}images/projects/cpass/cpass_1.png`,
       `${import.meta.env.BASE_URL}images/projects/cpass/cpass_2.png`,
@@ -98,7 +99,7 @@ const projects = [
     github: "#",
     demo: "#",
     fullDescription: "언제 어디서나 학습할 수 있는 모바일 학습 플랫폼입니다. HD 비디오 강의, 인터랙티브 퀴즈, 진도 추적 기능을 제공합니다.",
-
+    architecture: `${import.meta.env.BASE_URL}images/projects/brk/brk.svg`,
     problemSolvings: [
       {
         problem: "수천 개의 기부처 위치 데이터를 지도에 한 번에 표시할 때 렌더링 성능 저하와 메모리 과다 문제가 발생했습니다.",
@@ -140,7 +141,7 @@ const projects = [
     github: "#",
     demo: "#",
     fullDescription: "AI가 추천하는 맞춤형 여행 일정과 현지 정보를 제공하는 스마트 여행 도우미입니다. 실시간 날씨, 교통편, 숙박 정보를 한곳에서 관리합니다.",
-
+    architecture: `${import.meta.env.BASE_URL}images/projects/digilab/digilab.svg`,
     problemSolvings: [
       {
         problem: "블록체인 트랜잭션 처리는 비동기적이고 실패 가능성이 높아 사용자에게 명확한 피드백을 주기 어려웠습니다.",
