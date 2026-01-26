@@ -1,16 +1,14 @@
-import { ExternalLink, Github as GithubIcon } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectModal } from "./ProjectModal";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+
 
 const projects = [
   {
     title: "팝팝",
     description: "기프트카드 거래 및 커머스 앱",
-    image: `${import.meta.env.BASE_URL}images/projects/poppop/poppop_1.jpeg`,
+    image: `${import.meta.env.BASE_URL}images/projects/poppop/thumbnail_poppop.jpg`,
     tags: ["Flutter", "Firebase", "riverpod", "goRouter", "mockito"],
     github: "#",
     demo: "#",
@@ -51,7 +49,7 @@ const projects = [
   {
     title: "CPASS",
     description: "기존 네이티브 안드로이드 앱을 Flutter로 재개발하여 출시 및 디자인 개편, 채팅, 코인 거래 등 커뮤니티 기능을 추가하여 리뉴얼",
-    image: `${import.meta.env.BASE_URL}images/projects/cpass/cpass_1.png`,
+    image: `${import.meta.env.BASE_URL}images/projects/cpass/thumbnail_cpass.jpeg`,
     tags: ["Flutter", "riverpod", "dio", "Hive", "Dart"],
     github: "#",
     demo: "#",
@@ -78,7 +76,6 @@ const projects = [
     team: "2명 (Flutter 개발자 2명)",
     contribution: "80%",
     rating: "4.6/5.0",
-    architecture: `${import.meta.env.BASE_URL}images/projects/cpass/cpass.svg`,
     screenshots: [
       `${import.meta.env.BASE_URL}images/projects/cpass/cpass_1.png`,
       `${import.meta.env.BASE_URL}images/projects/cpass/cpass_2.png`,
@@ -94,12 +91,12 @@ const projects = [
   {
     title: "BRK Foundation",
     description: "코인으로 기부 기능과 기부 금액 집계 기능을 제공하는 필리핀 기부 단체 NGO 재단 앱",
-    image: `${import.meta.env.BASE_URL}images/projects/brk/brk_1.jpg`,
+    image: `${import.meta.env.BASE_URL}images/projects/brk/thumbnail_brk.jpg`,
     tags: ["Flutter", "riverpod", "Dart", "retrofit"],
     github: "#",
     demo: "#",
     fullDescription: "언제 어디서나 학습할 수 있는 모바일 학습 플랫폼입니다. HD 비디오 강의, 인터랙티브 퀴즈, 진도 추적 기능을 제공합니다.",
-    architecture: `${import.meta.env.BASE_URL}images/projects/brk/brk.svg`,
+
     problemSolvings: [
       {
         problem: "수천 개의 기부처 위치 데이터를 지도에 한 번에 표시할 때 렌더링 성능 저하와 메모리 과다 문제가 발생했습니다.",
@@ -136,12 +133,12 @@ const projects = [
   {
     title: "DigiLab",
     description: "지갑 생성, 송금, 스왑, QR 결제 등의 전반적인 코인 월렛 기능을 제공하는 블록체인 월렛",
-    image: `${import.meta.env.BASE_URL}images/projects/digilab/digilab_1.jpg`,
+    image: `${import.meta.env.BASE_URL}images/projects/digilab/thumbnail_digilab.png`,
     tags: ["Android", "Kotlin", "MVVM", "MPAndroidChart", "Retrofit2", "Coroutine"],
     github: "#",
     demo: "#",
     fullDescription: "AI가 추천하는 맞춤형 여행 일정과 현지 정보를 제공하는 스마트 여행 도우미입니다. 실시간 날씨, 교통편, 숙박 정보를 한곳에서 관리합니다.",
-    architecture: `${import.meta.env.BASE_URL}images/projects/digilab/digilab.svg`,
+
     problemSolvings: [
       {
         problem: "블록체인 트랜잭션 처리는 비동기적이고 실패 가능성이 높아 사용자에게 명확한 피드백을 주기 어려웠습니다.",
@@ -188,70 +185,49 @@ export function Projects() {
 
   return (
     <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="text-center mb-12">
-        <h2 className="mb-4">프로젝트</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          다양한 도메인에서 사용자 경험을 개선하고 비즈니스 가치를 창출한 프로젝트들입니다.
-        </p>
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold">프로젝트</h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <Card
+          <div
             key={project.title}
-            className="overflow-hidden flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+            className="group bg-white dark:bg-zinc-900 rounded-[1.5rem] p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100 dark:border-zinc-800 cursor-pointer transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center"
             onClick={() => handleProjectClick(project)}
           >
-            <div className="aspect-[4/3] overflow-hidden bg-muted">
+            {/* Image Container */}
+            <div className="relative w-24 h-24 mb-4 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
               <ImageWithFallback
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
               />
             </div>
-            <CardHeader className="p-4 pb-3">
-              <CardTitle className="text-base">{project.title}</CardTitle>
-              <CardDescription className="text-sm line-clamp-2">{project.description}</CardDescription>
-            </CardHeader>
-            <CardContent className="p-4 pt-0 mt-auto">
-              <div className="flex flex-wrap gap-1.5 mb-3">
+
+            {/* Content */}
+            <div className="flex flex-col items-center flex-1 w-full">
+              <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed w-full">
+                {project.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap justify-center gap-1.5 mt-auto">
                 {project.tags.slice(0, 3).map((tag) => (
-                  <Badge key={tag} variant="outline" className="text-xs">
+                  <Badge
+                    key={tag}
+                    variant="secondary"
+                    className="px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 hover:bg-slate-200 dark:hover:bg-zinc-700 font-medium border-0 transition-colors text-xs"
+                  >
                     {tag}
                   </Badge>
                 ))}
               </div>
-              <div className="flex gap-2">
-                <Button
-                  size="sm"
-                  variant="default"
-                  className="flex-1"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                  asChild
-                >
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-1 h-3 w-3" />
-                    Demo
-                  </a>
-                </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="flex-1"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                  asChild
-                >
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <GithubIcon className="mr-1 h-3 w-3" />
-                    Code
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
 

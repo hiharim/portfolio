@@ -202,10 +202,11 @@ export function CareerPage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">{t('sections.certifications')}</h2>
                         <ul className="space-y-2">
-                            {(t('certifications.items', { returnObjects: true }) as Array<{ name: string; date: string }>).map((cert, index: number) => (
+                            {(t('certifications.items', { returnObjects: true }) as Array<{ name: string; date: string, organization: string }>).map((cert, index: number) => (
                                 <li key={index} className="flex justify-between items-baseline">
                                     <span className="font-medium">{cert.name}</span>
                                     <span className="text-sm text-muted-foreground">{cert.date}</span>
+                                    <span className="text-sm text-muted-foreground">{cert.organization}</span>
                                 </li>
                             ))}
                         </ul>
@@ -215,10 +216,11 @@ export function CareerPage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">{t('sections.languages')}</h2>
                         <ul className="space-y-2">
-                            {(t('languageScores.items', { returnObjects: true }) as Array<{ name: string; score: string }>).map((lang, index: number) => (
+                            {(t('languageScores.items', { returnObjects: true }) as Array<{ name: string; score: string, organization: string }>).map((lang, index: number) => (
                                 <li key={index} className="flex justify-between items-baseline">
                                     <span className="font-medium">{lang.name}</span>
                                     <span className="text-sm text-muted-foreground">{lang.score}</span>
+                                    <span className="text-sm text-muted-foreground">{lang.organization}</span>
                                 </li>
                             ))}
                         </ul>

@@ -129,7 +129,8 @@
         "items": [
             {
                 "name": "사회조사분석사 2급",
-                "date": "2018.08"
+                "date": "2018.08",
+                "organization": "한국산업인력공단"
             }
         ]
     },
@@ -137,7 +138,8 @@
         "items": [
             {
                 "name": "TOEIC",
-                "score": "905 (2019.02)"
+                "score": "905 (2019.02)",
+                "organization": "YBM"
             }
         ]
     }

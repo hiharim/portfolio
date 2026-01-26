@@ -19,18 +19,23 @@ export function Hero() {
           사용자 중심의 직관적인 모바일 앱을 만듭니다. React Native와 Flutter를 활용하여 iOS와 Android 플랫폼에서 동작하는 고품질 애플리케이션을 개발합니다.
         </p>
         <div className="flex gap-3 pt-4">
-          <Button variant="default">
+          <Button
+            variant="default"
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             <Mail className="mr-2 h-4 w-4" />
             연락하기
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/hiharim" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
               Github
             </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/%ED%95%98%EB%A6%BC-%EC%A1%B0-572866258/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2 h-4 w-4" />
               LinkedIn
             </a>

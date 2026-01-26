@@ -17,11 +17,11 @@ const languages = [
     score: "905점",
     date: "2019.02"
   },
-//   {
-//     name: "OPIC",
-//     score: "IH",
-//     date: "2023.08"
-//   }
+  //   {
+  //     name: "OPIC",
+  //     score: "IH",
+  //     date: "2023.08"
+  //   }
 ];
 
 const certifications = [
@@ -30,16 +30,16 @@ const certifications = [
     issuer: "한국산업인력공단",
     date: "2018.07"
   },
-//   {
-//     name: "SQLD",
-//     issuer: "한국데이터산업진흥원",
-//     date: "2021.03"
-//   },
-//   {
-//     name: "AWS Certified Developer",
-//     issuer: "Amazon Web Services",
-//     date: "2022.09"
-//   }
+  //   {
+  //     name: "SQLD",
+  //     issuer: "한국데이터산업진흥원",
+  //     date: "2021.03"
+  //   },
+  //   {
+  //     name: "AWS Certified Developer",
+  //     issuer: "Amazon Web Services",
+  //     date: "2022.09"
+  //   }
 ];
 
 export function Credentials() {

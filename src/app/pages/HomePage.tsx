@@ -47,9 +47,6 @@ export function HomePage() {
                             <button onClick={() => handleScroll('side-projects')} className="text-sm hover:text-primary transition-colors">
                                 {t('nav.sideProjects')}
                             </button>
-                            <button onClick={() => handleScroll('credentials')} className="text-sm hover:text-primary transition-colors">
-                                {t('nav.credentials')}
-                            </button>
                             <button onClick={() => handleScroll('contact')} className="text-sm hover:text-primary transition-colors">
                                 {t('nav.contact')}
                             </button>
@@ -91,9 +88,7 @@ export function HomePage() {
 
                 <Separator className="my-8" />
 
-                <div id="credentials">
-                    <Credentials />
-                </div>
+
 
                 <Separator className="my-8" />
                 <div id="contact">
