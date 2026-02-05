@@ -14,6 +14,9 @@
     "footer": {
         "copyright": "© 2024 Mobile App Developer Portfolio. All rights reserved."
     },
+    "status": {
+        "current": "현재"
+    },
     "profile": {
         "name": "조하림 (Harim Cho)",
         "photo": "images/profile.jpeg",
@@ -23,6 +26,7 @@
     },
     "sections": {
         "workExperience": "Work Experience",
+        "workExperienceDescription": "확장 가능한 애플리케이션을 구축하는 6년 이상의 전문 모바일 개발 경험입니다.",
         "motivation": "Motivation",
         "selfIntroduction": "Introduction",
         "projects": "Projects",
@@ -33,16 +37,23 @@
     "workExperience": [
         {
             "company": "(주)비단팝팝",
-            "period": "2024.10 ~ Present",
+            "period": "2024.10 - Present",
             "position": "Flutter Developer",
             "achievements": [
-                "Web3 기반 이커머스 모바일 앱을 Flutter 개발 및 운영",
-                "자체 메인넷 NFT 기프트카드의 구매·교환·선물·결제취소 전 플로우 구현",
-                "사용자 토큰 또는 Toss Payments를 통한 결제 수단 설계/연동",
-                "상품 구매, 교환, 선물하기 등 커머스 핵심 기능의 UI 및 비즈니스 로직 개발 주도",
-                "외부 쿠폰(2사) 연동, 시리얼 → Code128 바코드 변환·표시(스캐너 호환성 점검)",
-                "Platform Channel 기반 네이티브 연동(주소록, 알림/푸시, 딥링크, 인앱 웹뷰) 및 권한/앱 링크 이슈 대응)",
-                "GitHub Actions 및 Fastlane을 활용한 CI/CD 파이프라인 구축으로 앱 배포 자동화 및 운영 효율 향상"
+                "블록체인 기반 NFT 기프트카드 이커머스 앱의 모바일(Flutter) 개발·운영",
+                "기존 Provider 기반 구조에서 신규 기능 중심으로 Riverpod 점진 적용 및 상태/로직 분리",
+                "커머스 핵심 도메인 로직(구매, 선물, 교환) 설계 및 구현 : 일반 구매뿐만 아니라 선물하기(메시지 카드 포함), 아이템 교환 등 다양한 커머스 시나리오를 설계 및 구현함",
+                "Sentry 기반 크래시/런타임 이슈 추적 및 원인 분석하여 수정/검증까지 운영",
+                "TestFlight / Android App Tester 기반 테스트 빌드 배포 및 QA 지원(릴리즈/배포 관리, 피드백 반영)",
+                "iOS/Android 권한,연락처(Contacts) 네이티브 연동(Flutter MethodChannel) 및 WebView JS Bridge 기반 앱 라우팅 구현"
+            ],
+            "location": "Seoul, South Korea",
+            "type": "Full-time",
+            "skills": [
+                "Flutter",
+                "Dart",
+                "Firebase",
+                "CI/CD"
             ]
         },
         {
@@ -50,10 +61,21 @@
             "period": "2022.02 - 2023.06",
             "position": "Android/Flutter Developer",
             "achievements": [
-                "플랫폼 마이그레이션: 기존 Android 네이티브(1인 개발) 기반의 지갑 서비스를 Flutter로 재설계하여 코드베이스 통합 및 생산성 향상",
-                "핵심 금융 로직 구현: 블록체인 지갑의 송금, 스왑, QR 결제 등 데이터 무결성이 필수적인 핵심 플로우 전담 개발",
-                "글로벌 서비스 인프라 구축: Jenkins 기반 CI/CD 파이프라인 구성 및 다국어(i18n)/다중 통화 대응 시스템 설계로 필리핀 현지 서비스 운영 안정화",
-                "기부 플랫폼 총괄: 기부 지역 Google Maps 연동 및 WebView JavaScript Bridge 구축 등 주요 기능의 70% 이상을 주도적으로 개발"
+                "블록체인 스타트업에서 필리핀 세부 지방 정부/기업/관광객 대상 모바일 앱 개발 및 운영",
+                "기존 iOS(Swift), Android(Kotlin) 앱을 Flutter로 마이그레이션하여 유지보수 비용을 절감",
+                "프로젝트 초기 단계에서 기획,디자인 과정 참여 및 요구사항 구체화",
+                "CS팀과 협력해 사용자 불편과 버그를 우선순위화하여 빠르게 개선",
+                "Jenkins 기반 자동 빌드/테스트 및 주 1회 배포 운영",
+                "Asana/Notion을 활용해 다부서/다인원(약 17명) 협업 및 일정/이슈 관리"
+            ],
+            "location": "Seoul, South Korea",
+            "type": "Full-time",
+            "skills": [
+                "Android",
+                "Kotlin",
+                "Flutter",
+                "Dart",
+                "Socket.io"
             ]
         }
     ],
@@ -61,7 +83,7 @@
         "content": "기프트카드 및 코인 월렛과 같이 데이터의 무결성이 중요한 서비스를 책임지며 사용자 경험을 결정짓는 것은 결국 0.1초의 성능 개선과 한 번의 예외 처리라는 것을 배웠습니다. 안드로이드 네이티브와 플러터를 아우르는 저의 기술적 깊이와 통계학적 분석 능력을 바탕으로 서비스가 어떠한 환경에서도 가장 안정적으로 동작하도록 기여하고 싶어 지원했습니다."
     },
     "selfIntroduction": {
-        "content": "안녕하세요. 3년 차 모바일 앱 개발자 조하림입니다.\nWeb3 기반 기프트카드 이커머스 ‘팝팝’과 블록체인 토큰 지갑 앱을 개발·운영했습니다. 선물·쿠폰·결제·지갑 등 핵심 플로우를 구현했고 Android 앱의 Flutter 마이그레이션을 주도하며 상태관리 구조 개선, 모듈화, 성능 최적화를 진행했습니다.\n현재는 운영 안정성과 확장성을 함께 만족시키는 구조를 만드는 데 강점이 있습니다."
+        "content": "안드로이드 네이티브 개발 경험을 바탕으로 3년간 Flutter 앱을 개발해온 조하림입니다\n블록체인 지갑, NFT 커머스 앱을 프로덕션까지 개발/운영하며 기능을 고도화했습니다\nRiverpod/MVVM 아키텍처 설계부터 성능 최적화, 크래시 대응, 스토어 배포까지 전 과정을 담당했습니다"
     },
     "projects": {
         "poppop": {
@@ -70,11 +92,12 @@
             "contribution": "50%",
             "description": "기프트카드 NFT 거래 및 커머스 앱",
             "achievements": [
-                "Provider → Riverpod·ViewModel 전환으로 화면–로직 결합도 ↓, 결제 화면 부분 리렌더 적용 → 쿠폰·포인트 변경 시 전체 리빌드 제거",
-                "Toss Payments 연동 시 merchant_uid 고유 관리·웹훅 서명 검증·서버와 주문 상태 동기화 → 중복 결제 방지 및 환불/취소 안정화",
-                "리스트/페이징 성능 개선: 커스텀 페이징 레이어 도입(Riverpod Family, 키 캐시·프리패치·디바운스)으로 평균 3–6×, 초기화 최대 10× 성능 향상",
-                "Sentry 도입으로 로컬 재현 불가능한 크래시 이슈를 효과적으로 추적하고 장애 대응 속도를 단축, 월 2회 배포 유지",
-                "Google Play / App Store 출시 및 운영"
+                "지갑 중심으로 설계된 Provider 기반 상태 관리가 커머스 도메인 확장에 따라 구조적 한계 발생, 복잡한 상태 흐름 대응을 위해 Riverpod 기반으로 전면 마이그레이션하고 일관된 아키텍처를 구축함",
+                "Toss Payments API 연동 및 결제 모듈 구현: OAuth2 기반 PgTossService 구현, 결제 승인·취소·웹훅 처리 모듈화",
+                "JWT 및 지갑 보안 저장소 설계: flutter_secure_storage 기반 iOS Keychain/Android Keystore 보안 환경 구축",
+                "상품 목록 조회 시 페이징 성능 저하와 초기 로딩 지연 문제가 발생, Riverpod Family 기반의 커스텀 페이징 레이어를 구축하고 키 캐싱, 프리패치, 디바운스 전략을 적용하여 평균 3~6배, 초기화 시 최대 10배의 성능 향상을 달성하여 대용량 상품 리스트 조회 기능을 최적화함",
+                "홈 배너 렌더링 과정에서 이미지 비율 계산 반복으로 인한 스크롤 지연 현상이 발생, 비율 계산 결과를 메모이제이션 캐싱하여 연산 부하를 제거하여 스크롤 처리 속도를 최대 11배 개선하고 홈 화면 배너 렌더링 성능을 향상",
+                "Google Play / App Store 에 출시하여 실사용자 대상 서비스 운영 경험"
             ]
         },
         "cpass": {

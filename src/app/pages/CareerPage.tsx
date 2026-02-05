@@ -1,4 +1,4 @@
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download } from "lucide-react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -6,14 +6,27 @@ import { useReactToPrint } from "react-to-print";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { Button } from "../components/ui/button";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "../components/ui/dropdown-menu";
 
 export function CareerPage() {
     const contentRef = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
 
-    const handlePrint = useReactToPrint({
+    const handlePrintA4 = useReactToPrint({
         contentRef,
-        documentTitle: "Career_Profile",
+        documentTitle: "Career_Profile_A4",
+        pageStyle: "@page { size: A4; margin: 0; } @media print { .print-area { width: 210mm; min-height: 297mm; } }",
+    });
+
+    const handlePrintA3 = useReactToPrint({
+        contentRef,
+        documentTitle: "Career_Profile_A3",
+        pageStyle: "@page { size: A3; margin: 0; } @media print { .print-area { width: 297mm; min-height: 420mm; } }",
     });
 
     return (
@@ -29,19 +42,32 @@ export function CareerPage() {
                     </Button>
                     <div className="flex gap-2">
                         <LanguageToggle />
-                        <Button onClick={() => handlePrint()}>
-                            <Download className="mr-2 h-4 w-4" />
-                            {t('nav.downloadPDF')}
-                        </Button>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button>
+                                    <Download className="mr-2 h-4 w-4" />
+                                    {t('nav.downloadPDF')}
+                                    <ChevronDown className="ml-2 h-4 w-4" />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                                <DropdownMenuItem onSelect={() => handlePrintA4()}>
+                                    A4 Size (210 x 297mm)
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onSelect={() => handlePrintA3()}>
+                                    A3 Size (297 x 420mm)
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </div>
             </div>
 
             {/* Printable Content Area */}
-            <div className="container mx-auto max-w-[210mm] mt-8">
+            <div className="container mx-auto max-w-4xl mt-8">
                 <div
                     ref={contentRef}
-                    className="bg-white p-[15mm] shadow-sm min-h-[297mm]"
+                    className="bg-white p-[15mm] shadow-sm min-h-[297mm] print-area"
                     style={{ margin: "0 auto" }}
                 >
                     {/* Header / Profile with Photo and Introduction */}
@@ -203,10 +229,12 @@ export function CareerPage() {
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">{t('sections.certifications')}</h2>
                         <ul className="space-y-2">
                             {(t('certifications.items', { returnObjects: true }) as Array<{ name: string; date: string, organization: string }>).map((cert, index: number) => (
-                                <li key={index} className="flex justify-between items-baseline">
+                                <li key={index} className="flex justify-between items-start">
                                     <span className="font-medium">{cert.name}</span>
-                                    <span className="text-sm text-muted-foreground">{cert.date}</span>
-                                    <span className="text-sm text-muted-foreground">{cert.organization}</span>
+                                    <div className="text-right">
+                                        <div className="text-sm text-muted-foreground">{cert.date}</div>
+                                        <div className="text-sm text-muted-foreground">{cert.organization}</div>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
@@ -217,10 +245,12 @@ export function CareerPage() {
                         <h2 className="text-2xl font-bold mb-6 border-b pb-2">{t('sections.languages')}</h2>
                         <ul className="space-y-2">
                             {(t('languageScores.items', { returnObjects: true }) as Array<{ name: string; score: string, organization: string }>).map((lang, index: number) => (
-                                <li key={index} className="flex justify-between items-baseline">
+                                <li key={index} className="flex justify-between items-start">
                                     <span className="font-medium">{lang.name}</span>
-                                    <span className="text-sm text-muted-foreground">{lang.score}</span>
-                                    <span className="text-sm text-muted-foreground">{lang.organization}</span>
+                                    <div className="text-right">
+                                        <div className="text-sm text-muted-foreground">{lang.score}</div>
+                                        <div className="text-sm text-muted-foreground">{lang.organization}</div>
+                                    </div>
                                 </li>
                             ))}
                         </ul>

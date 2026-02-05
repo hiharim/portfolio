@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Contact } from "../components/Contact";
-import { Credentials } from "../components/Credentials";
+import { FloatingAppIcons } from "../components/FloatingAppIcons";
 import { Hero } from "../components/Hero";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { Projects } from "../components/Projects";
@@ -60,7 +60,10 @@ export function HomePage() {
 
             {/* Main Content */}
             <main>
-                <Hero />
+                <div className="relative overflow-hidden mb-12">
+                    <FloatingAppIcons />
+                    <Hero />
+                </div>
 
                 <Separator className="my-8" />
 

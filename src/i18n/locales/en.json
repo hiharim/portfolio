@@ -14,6 +14,9 @@
     "footer": {
         "copyright": "© 2024 Mobile App Developer Portfolio. All rights reserved."
     },
+    "status": {
+        "current": "Current"
+    },
     "profile": {
         "name": "Harim Cho (조하림)",
         "title": "Mobile App Developer",
@@ -22,6 +25,7 @@
     },
     "sections": {
         "workExperience": "Work Experience",
+        "workExperienceDescription": "6+ years of specialized mobile development experience building scalable applications.",
         "motivation": "Motivation",
         "selfIntroduction": "About Me",
         "projects": "Key Projects",
@@ -38,6 +42,14 @@
                 "Achievement 1",
                 "Achievement 2",
                 "Achievement 3"
+            ],
+            "location": "Seoul, South Korea",
+            "type": "Full-time",
+            "skills": [
+                "Flutter",
+                "Dart",
+                "Firebase",
+                "CI/CD"
             ]
         },
         {
@@ -48,6 +60,15 @@
                 "Achievement 1",
                 "Achievement 2",
                 "Achievement 3"
+            ],
+            "location": "Seoul, South Korea",
+            "type": "Full-time",
+            "skills": [
+                "Android",
+                "Kotlin",
+                "Flutter",
+                "Dart",
+                "Socket.io"
             ]
         }
     ],
