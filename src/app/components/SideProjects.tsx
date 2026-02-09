@@ -1,43 +1,27 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ProjectModal } from "./ProjectModal";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
-const sideProjects = [
-  {
-    title: "SingTogether",
-    description: "노래방 앱",
-    image: `${import.meta.env.BASE_URL}images/projects/singtogether/sing_1.png`,
-    tags: ["Flutter", "Audio", "UI/UX"],
-    github: "#",
-    demo: "#",
-    fullDescription: "노래방 기능을 제공하는 모바일 앱입니다.",
-    screenshots: [
-      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_1.png`,
-      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_2.png`,
-      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_3.png`,
-      `${import.meta.env.BASE_URL}images/projects/singtogether/sing_4.png`
-    ],
-    architecture: `${import.meta.env.BASE_URL}images/projects/singtogether/singtogether.svg`,
-    features: [
-      "노래 검색 및 재생",
-      "녹음 기능",
-      "점수 시스템",
-      "플레이리스트 관리"
-    ],
-    duration: "1개월",
-    team: "개인 프로젝트",
-    contribution: "100%"
-  },
-];
-
 export function SideProjects() {
-  const [selectedProject, setSelectedProject] = useState<typeof sideProjects[0] | null>(null);
+  const { t } = useTranslation();
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: typeof sideProjects[0]) => {
+  // i18n에서 사이드 프로젝트 데이터 가져오기
+  const sideProjectsData = t('sideProjects', { returnObjects: true }) as Array<any>;
+
+  const sideProjects = sideProjectsData.map(project => ({
+    ...project,
+    image: `${import.meta.env.BASE_URL}${project.image}`,
+    screenshots: project.screenshots?.map((s: string) => `${import.meta.env.BASE_URL}${s}`),
+    architecture: project.architecture ? `${import.meta.env.BASE_URL}${project.architecture}` : undefined,
+  }));
+
+  const handleProjectClick = (project: any) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -63,7 +47,7 @@ export function SideProjects() {
             </CardHeader>
             <CardContent className="mt-auto">
               <div className="flex flex-wrap gap-1.5 mb-3">
-                {project.tags.map((tag) => (
+                {project.tags.map((tag: string) => (
                   <Badge key={tag} variant="secondary" className="text-xs">
                     {tag}
                   </Badge>

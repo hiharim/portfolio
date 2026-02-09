@@ -80,24 +80,108 @@
     },
     "projects": {
         "poppop": {
-            "title": "1. PopPop - Gift Card Trading Platform",
+            "title": "PopPop",
             "period": "2024.10 ~ (Flutter)",
             "contribution": "100%",
-            "description": "C2C platform for secure gift card trading between users",
+            "description": "Gift card trading and commerce app",
+            "fullDescription": "A platform where users can purchase, exchange, and gift various gift cards.",
+            "image": "images/projects/poppop/thumbnail_poppop.jpg",
+            "tags": [
+                "Flutter",
+                "Firebase",
+                "riverpod",
+                "goRouter",
+                "mockito"
+            ],
+            "github": "#",
+            "demo": "#",
+            "duration": "2024.10 ~",
+            "team": "2 (Flutter Developer)",
+            "rating": "4.8/5.0",
+            "screenshots": [
+                "images/projects/poppop/poppop_1.jpeg",
+                "images/projects/poppop/poppop_2.jpeg",
+                "images/projects/poppop/poppop_3.jpeg"
+            ],
+            "problemSolvings": [
+                {
+                    "problem": "In the existing MVC pattern, the UI and business logic were tightly coupled, causing UI code to be affected whenever payment logic was modified.",
+                    "solution": "Introduced Riverpod + ViewModel pattern to strictly separate UI and logic. Managed payment logic as a separate Provider to improve maintainability.",
+                    "conclusion": "Gained a deep understanding of the importance of state management patterns through this project."
+                },
+                {
+                    "problem": "Scroll jank occurred on list screens that loaded many images, degrading user experience.",
+                    "solution": "Integrated cached_network_image with a dedicated image resizing cache server, optimizing scroll performance to 60fps.",
+                    "conclusion": "Gained experience in building stable payment systems even under high traffic conditions."
+                },
+                {
+                    "problem": "Expanding features was difficult due to complex state management.",
+                    "solution": "Modularized state management logic to maximize reusability.",
+                    "conclusion": "Achievements include a crash rate reduction to under 0.1% after refactoring."
+                }
+            ],
+            "contributions": [
+                "Global state management and business logic separation using Riverpod",
+                "Deep link handling and navigation structure design using GoRouter",
+                "Push notification system implementation based on Firebase Cloud Messaging (FCM)",
+                "Integration of complex payment processes and external payment modules"
+            ],
             "achievements": [
                 "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
                 "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Integrated Toss Payments and implemented payment verification logic",
+                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic",
+                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic",
                 "Built a stable payment system by integrating Toss Payments and implementing payment verification logic"
             ]
         },
         "cpass": {
-            "title": "2. CPASS - Comprehensive Fitness & Wallet App",
-            "period": "2023.01 ~ 2024.09 (Flutter / Android)",
+            "title": "CPASS",
+            "period": "2022.09 ~ 2023.06 (Flutter)",
             "contribution": "80%",
-            "description": "Blockchain-based cryptocurrency wallet and payment service",
+            "description": "Rediscovered and launched existing native Android app in Flutter with design renewal, chat, and coin trading features.",
+            "fullDescription": "Remade the existing native Android app with Flutter, adding features like chat and coin trading while renewing the UI/UX.",
+            "image": "images/projects/cpass/thumbnail_cpass.jpeg",
+            "tags": [
+                "Flutter",
+                "riverpod",
+                "dio",
+                "Hive",
+                "Dart"
+            ],
+            "github": "#",
+            "demo": "#",
+            "duration": "4 months",
+            "team": "2 (2 Flutter Developers)",
+            "rating": "4.6/5.0",
+            "screenshots": [
+                "images/projects/cpass/cpass_1.png",
+                "images/projects/cpass/cpass_2.png",
+                "images/projects/cpass/cpass_3.png"
+            ],
+            "problemSolvings": [
+                {
+                    "problem": "The existing native app was difficult to maintain and required separate development staff for iOS/Android, resulting in low cost-efficiency.",
+                    "solution": "Adopted Flutter cross-platform to handle both markets with a single codebase, improving development productivity by 200%.",
+                    "conclusion": "A successful case of transitioning legacy code to modern cross-platform technology."
+                },
+                {
+                    "problem": "Frequent WebSocket connection instability occurred when implementing real-time chat.",
+                    "solution": "Implemented Socket.io along with custom reconnection logic and an offline queuing system to prevent message loss.",
+                    "conclusion": "Acquired deep domain knowledge by re-analyzing existing business logic during the migration process."
+                },
+                {
+                    "problem": "Performance issues occurred when processing large amounts of data.",
+                    "solution": "Integrated Hive DB to optimize local data caching.",
+                    "conclusion": "Greatly contributed to reducing maintenance costs."
+                }
+            ],
+            "contributions": [
+                "Migrated existing Android native app to Flutter",
+                "Implemented real-time chat using WebSocket",
+                "Supported local data caching and offline mode using Hive DB",
+                "Applied multi-language support (i18n) for global service"
+            ],
             "achievements": [
                 "Migrated existing native app to Flutter, improving development productivity by 200%",
                 "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
@@ -108,10 +192,51 @@
             ]
         },
         "brk": {
-            "title": "3. BRK Foundation - Donation Platform",
-            "period": "2022.05 ~ 2022.08 (Flutter)",
+            "title": "BRK Foundation",
+            "period": "2023.02 ~ 2023.03 (Flutter)",
             "contribution": "70%",
-            "description": "Regional donation project matching and management platform for Philippines",
+            "description": "Philippine NGO donation app with coin donation and tracking features.",
+            "fullDescription": "A platform for a Philippine NGO that allows donations via coins and aggregates donation amounts.",
+            "image": "images/projects/brk/thumbnail_brk.jpg",
+            "tags": [
+                "Flutter",
+                "riverpod",
+                "Dart",
+                "retrofit"
+            ],
+            "github": "#",
+            "demo": "#",
+            "duration": "3 months",
+            "team": "2 (Flutter Developer)",
+            "rating": "4.7/5.0",
+            "screenshots": [
+                "images/projects/brk/brk_1.jpg",
+                "images/projects/brk/brk_2.jpg",
+                "images/projects/brk/brk_3.jpg"
+            ],
+            "problemSolvings": [
+                {
+                    "problem": "Rendering performance issues and excessive memory usage occurred when displaying thousands of donation locations on a map at once.",
+                    "solution": "Adopted Google Maps Clustering (ClusterManager) to group markers based on zoom level, minimizing rendering load.",
+                    "conclusion": "A project where I learned how technology can contribute to creating actual social value."
+                },
+                {
+                    "problem": "Data loading failures were frequent due to poor local network environments.",
+                    "solution": "Applied Retry Interceptor to Retrofit and local caching in Room DB for critical data, implementing an Offline-First architecture.",
+                    "conclusion": "Secured technical capability in optimizing and integrating Geographic Information Systems (GIS) into mobile apps."
+                },
+                {
+                    "problem": "The complex donation process needed to be simplified.",
+                    "solution": "Streamlined the donation process step-by-step considering User Experience (UX).",
+                    "conclusion": "Experienced the importance of Offline-First architecture firsthand."
+                }
+            ],
+            "contributions": [
+                "RESTful API communication module design using Retrofit",
+                "Google Maps API integration and custom marker clustering",
+                "App performance optimization and memory leak prevention",
+                "Animation and interaction implementation for UX improvement"
+            ],
             "achievements": [
                 "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
                 "Ensured app usability even in unstable network environments by introducing offline-first architecture",
@@ -124,18 +249,87 @@
         "digiLab": {
             "title": "DigiLab",
             "period": "2022.02 ~ 2022.08 (Android)",
-            "contribution": "90%",
-            "description": "Mobile wallet application for digital asset management and trading",
+            "contribution": "100%",
+            "description": "Blockchain wallet providing wallet creation, remittance, swap, and QR payment.",
+            "fullDescription": "Comprehensive mobile wallet app for blockchain assets.",
+            "image": "images/projects/digilab/thumbnail_digilab.png",
+            "tags": [
+                "Android",
+                "Kotlin",
+                "MVVM",
+                "MPAndroidChart",
+                "Retrofit2",
+                "Coroutine"
+            ],
+            "github": "#",
+            "demo": "#",
+            "duration": "7 months",
+            "team": "1 (Android Developer)",
+            "rating": "4.5/5.0",
+            "screenshots": [
+                "images/projects/digilab/digilab_1.jpg",
+                "images/projects/digilab/digilab_2.jpg",
+                "images/projects/digilab/digilab_3.jpg"
+            ],
+            "problemSolvings": [
+                {
+                    "problem": "Blockchain transaction processing is asynchronous and has a high probability of failure, making it difficult to give clear feedback to users.",
+                    "solution": "Implemented a state machine that polls transaction status and reflects progress in real-time in the UI.",
+                    "conclusion": "Gained a deep understanding of the Android framework by building a fintech app requiring high security and reliability from scratch by myself."
+                },
+                {
+                    "problem": "Security requirements for managing private keys and mnemonic codes safely were extremely demanding.",
+                    "solution": "Used Android Keystore System to encrypt and store sensitive data, and applied rooting detection and screen capture prevention.",
+                    "conclusion": "Felt great reward in advancing the app by reflecting user feedback after launch."
+                },
+                {
+                    "problem": "Performance degradation was expected due to complex encryption logic.",
+                    "solution": "Handled encryption tasks on background threads to maintain UI responsiveness.",
+                    "conclusion": "Deeply recognized the importance of secure coding."
+                }
+            ],
+            "contributions": [
+                "Development productivity improved by 200% by migrating to Android modern patterns",
+                "Asynchronous task processing and UI thread optimization using Coroutine",
+                "Blockchain wallet creation and transaction processing logic implementation",
+                "Biometric authentication (Fingerprint, FaceID) integration"
+            ],
             "achievements": [
-                "기존 네이티브 앱을 Flutter로 마이그레이션하여 개발 생산성 200% 향상",
-                "Socket.io 기반 실시간 채팅 시스템 구축 및 오프라인 메시지 큐잉 구현으로 데이터 유실 방지",
-                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
-                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
-                "Retrofit 및 Dio 인터셉터를 활용한 견고한 에러 핸들링 및 재시도 로직 구현",
-                "다국어 지원(i18n) 시스템 구축으로 글로벌 서비스 확장 기반 마련"
+                "Migrated native app logic to modern architecture",
+                "Implemented real-time transaction monitoring",
+                "Retrofit and Dio interceptors for robust error handling",
+                "Retrofit and Dio interceptors for robust error handling",
+                "Retrofit and Dio interceptors for robust error handling",
+                "Established global service expansion foundation"
             ]
         }
     },
+    "sideProjects": [
+        {
+            "id": "singtogether",
+            "title": "SingTogether",
+            "description": "Karaoke App",
+            "image": "images/projects/singtogether/sing_1.png",
+            "tags": [
+                "Flutter",
+                "Audio",
+                "UI/UX"
+            ],
+            "github": "#",
+            "demo": "#",
+            "fullDescription": "A mobile app providing karaoke features.",
+            "screenshots": [
+                "images/projects/singtogether/sing_1.png",
+                "images/projects/singtogether/sing_2.png",
+                "images/projects/singtogether/sing_3.png",
+                "images/projects/singtogether/sing_4.png"
+            ],
+            "architecture": "images/projects/singtogether/singtogether.svg",
+            "duration": "1 month",
+            "team": "Personal Project",
+            "contribution": "100%"
+        }
+    ],
     "education": {
         "university": "University Name",
         "period": "2016.03 - 2022.02",
