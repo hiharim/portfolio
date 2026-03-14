@@ -3,11 +3,10 @@
         "backToPortfolio": "포트폴리오로 돌아가기",
         "downloadPDF": "PDF 다운로드",
         "portfolio": "포트폴리오",
-        "careerDescription": "경력기술서",
+        "careerDescription": "이력서",
         "experience": "경력",
         "skills": "스킬",
         "projects": "프로젝트",
-        "sideProjects": "사이드 프로젝트",
         "credentials": "자격증",
         "contact": "연락처"
     },

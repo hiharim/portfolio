@@ -1,8 +1,6 @@
-import { ArrowRight, Building2, MapPin } from "lucide-react";
+import { Building2, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
 export function Resume() {
@@ -19,11 +17,13 @@ export function Resume() {
 
     return (
         <section className="container mx-auto px-4 py-16 max-w-6xl">
-            <div className="text-center mb-12">
-                <h2 className="mb-4">{t('sections.workExperience')}</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                    {t('sections.workExperienceDescription')}
+            <div className="mb-10">
+                <p className="text-sm font-semibold text-primary/80 uppercase tracking-widest mb-2">
+                    Experience
                 </p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                    {t('sections.workExperience')}
+                </h2>
             </div>
 
             <div className="space-y-8 mb-12">
@@ -75,15 +75,6 @@ export function Resume() {
                         </CardContent>
                     </Card>
                 ))}
-            </div>
-
-            <div className="flex justify-center">
-                <Button size="lg" asChild className="group">
-                    <Link to="/career">
-                        {t('nav.careerDescription')}
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                </Button>
             </div>
         </section>
     );
