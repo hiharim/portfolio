@@ -1,5 +1,5 @@
 import { ArrowLeft, ChevronDown, Download } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
@@ -16,6 +16,11 @@ import {
 export function CareerPage() {
     const contentRef = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
+
+    // 스크롤을 상단으로 초기화 (다른 페이지 하단에서 이동 시 대비)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handlePrintA4 = useReactToPrint({
         contentRef,
