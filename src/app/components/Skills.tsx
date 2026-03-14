@@ -1,4 +1,4 @@
-import { Blocks, Code2, Rocket, Smartphone, Wrench } from "lucide-react";
+import { Blocks, Code2, Smartphone, Wrench } from "lucide-react";
 import { type ReactNode } from "react";
 
 interface SkillCategory {

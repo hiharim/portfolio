@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Contact } from "../components/Contact";
-import { FloatingAppIcons } from "../components/FloatingAppIcons";
+// import { FloatingAppIcons } from "../components/FloatingAppIcons";
 import { Hero } from "../components/Hero";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { ProjectShowcase } from "../components/ProjectShowcase";
@@ -92,7 +92,7 @@ export function HomePage() {
             <main>
                 {/* Hero + Floating Icons */}
                 <div className="relative overflow-hidden">
-                    <FloatingAppIcons />
+                    {/* <FloatingAppIcons /> */}
                     <Hero />
                 </div>
 
