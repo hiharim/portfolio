@@ -25,7 +25,7 @@ const skillCategories: SkillCategory[] = [
     icon: <Code2 className="w-6 h-6" />,
     gradient: "from-[#027DFD]/14 to-[#54C5F8]/8",
     iconColor: "text-[#0288D1] bg-[#0288D1]/12",
-    skills: ["Dart", "Kotlin", "Java", "TypeScript"],
+    skills: ["Dart", "Kotlin", "Java"],
   },
   {
     title: "State & Architecture",

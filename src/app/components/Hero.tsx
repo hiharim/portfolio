@@ -37,7 +37,7 @@ export function Hero() {
         <p className="text-lg text-muted-foreground font-medium">
           {t("profile.title")}
         </p>
-        <p className="max-w-xl text-muted-foreground/80 whitespace-pre-line text-sm leading-relaxed mt-2">
+        <p className="max-w-xl text-base text-gray-600 dark:text-gray-400 whitespace-pre-line leading-relaxed mt-2">
           {t("selfIntroduction.content")}
         </p>
 
