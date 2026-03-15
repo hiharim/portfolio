@@ -31,7 +31,33 @@
         "projects": "Key Projects",
         "education": "Education",
         "certifications": "Certifications",
-        "languages": "Languages"
+        "languages": "Languages",
+        "skills": "Technical Stack"
+    },
+    "skills": {
+        "expertise": "Expertise",
+        "categories": [
+            {
+                "title": "Mobile Frameworks",
+                "subtitle": "Cross-platform Mobile Development",
+                "items": ["Flutter", "Android (Kotlin)", "Jetpack Compose"]
+            },
+            {
+                "title": "Languages",
+                "subtitle": "Core Programming Languages",
+                "items": ["Dart", "Kotlin", "Java"]
+            },
+            {
+                "title": "State & Architecture",
+                "subtitle": "Patterns & State Management",
+                "items": ["Riverpod", "Provider", "MVVM", "Clean Architecture"]
+            },
+            {
+                "title": "DevOps & Tools",
+                "subtitle": "Development & Deployment Tools",
+                "items": ["Git", "CI/CD", "Sentry", "Figma", "App Store Deploy"]
+            }
+        ]
     },
     "workExperience": [
         {
@@ -79,6 +105,7 @@
         "content": "As a mobile developer with 6 years of experience, I specialize in Flutter and Native Android development.\nI have proactively led projects in various environments, from startups to growing organizations,\nwith particular strengths in architecture design aimed at improving code quality and development productivity.\nI value smooth communication with team members and want to contribute to creating a culture of mutual growth."
     },
     "projects": {
+        "showcaseDescription": "Explore a collection of mobile applications that define excellence in user experience and technical robustness.",
         "poppop": {
             "title": "PopPop",
             "period": "2024.10 ~ (Flutter)",
@@ -309,7 +336,7 @@
             "id": "singtogether",
             "title": "SingTogether",
             "description": "Karaoke App",
-            "image": "images/projects/singtogether/sing_1.png",
+            "image": "images/projects/singtogether/thumbnail_singtogether.png",
             "tags": [
                 "Flutter",
                 "Audio",

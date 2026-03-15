@@ -74,19 +74,21 @@ export function ProjectShowcase() {
     returnObjects: true,
   }) as Array<any>;
 
-  // 모든 프로젝트 합치기
+  // 모든 프로젝트 합치기 - showcaseDescription 제외
   const allProjects: ShowcaseProject[] = [
-    ...Object.entries(projectsData).map(([id, project]) => ({
-      ...project,
-      id,
-      image: `${import.meta.env.BASE_URL}${project.image}`,
-      screenshots: project.screenshots?.map(
-        (s: string) => `${import.meta.env.BASE_URL}${s}`
-      ),
-      architecture: project.architecture
-        ? `${import.meta.env.BASE_URL}${project.architecture}`
-        : undefined,
-    })),
+    ...Object.entries(projectsData)
+      .filter(([id]) => id !== "showcaseDescription")
+      .map(([id, project]) => ({
+        ...project,
+        id,
+        image: `${import.meta.env.BASE_URL}${project.image}`,
+        screenshots: project.screenshots?.map(
+          (s: string) => `${import.meta.env.BASE_URL}${s}`
+        ),
+        architecture: project.architecture
+          ? `${import.meta.env.BASE_URL}${project.architecture}`
+          : undefined,
+      })),
     ...sideProjectsData.map((project) => ({
       ...project,
       image: `${import.meta.env.BASE_URL}${project.image}`,
@@ -151,18 +153,19 @@ export function ProjectShowcase() {
   };
 
   return (
-    <section className="relative py-16 overflow-hidden" id="project-showcase">
+    <section className="relative py-24 overflow-hidden" id="project-showcase">
       {/* Section Header */}
-      <div className="container mx-auto px-4 max-w-6xl mb-10">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-semibold text-primary/80 uppercase tracking-widest mb-2">
-              Featured
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              프로젝트
-            </h2>
+      <div className="container mx-auto px-4 max-w-6xl mb-16">
+        <div className="flex flex-col items-center text-center">
+          <div className="px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-4">
+            Curated Works
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            {t("nav.projects")}
+          </h2>
+          <p className="text-muted-foreground text-base max-w-lg">
+            {t("projects.showcaseDescription")}
+          </p>
         </div>
       </div>
 
@@ -312,8 +315,8 @@ export function ProjectShowcase() {
                 </div>
 
                 {/* Bottom Info (App Store style) */}
-                <div className="flex items-center gap-3 mt-4 px-1">
-                  <div className="w-10 h-10 rounded-xl overflow-hidden shadow-sm flex-shrink-0 border border-gray-200 dark:border-zinc-700">
+                <div className="flex items-center gap-3 mt-4 px-3 py-2 rounded-2xl bg-zinc-50/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-100 dark:border-zinc-800/50">
+                  <div className="w-10 h-10 rounded-xl overflow-hidden shadow-sm flex-shrink-0 border border-zinc-200 dark:border-zinc-700">
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}

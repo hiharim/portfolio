@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Contact } from "../components/Contact";
-// import { FloatingAppIcons } from "../components/FloatingAppIcons";
+import { FloatingAppIcons } from "../components/FloatingAppIcons";
 import { Hero } from "../components/Hero";
 import { LanguageToggle } from "../components/LanguageToggle";
 import { ProjectShowcase } from "../components/ProjectShowcase";
@@ -57,7 +57,7 @@ export function HomePage() {
                         <div className="flex gap-5 items-center">
                             <Link
                                 to="/career"
-                                className={`font-medium text-primary hover:text-primary/80 transition-all duration-300 ${isScrolled ? "text-xs" : "text-sm"
+                                className={`inline-flex items-center justify-center font-bold text-white bg-primary rounded-full hover:brightness-110 transition-all duration-300 shadow-sm hover:shadow-md ${isScrolled ? "text-[10px] px-3 py-1.5" : "text-xs px-4 py-2"
                                     }`}
                             >
                                 {t('nav.careerDescription')}
@@ -92,7 +92,7 @@ export function HomePage() {
             <main>
                 {/* Hero + Floating Icons */}
                 <div className="relative overflow-hidden">
-                    {/* <FloatingAppIcons /> */}
+                    <FloatingAppIcons />
                     <Hero />
                 </div>
 

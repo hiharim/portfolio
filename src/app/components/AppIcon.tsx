@@ -6,6 +6,7 @@ interface AppIconProps {
   size?: "sm" | "md" | "lg" | "xl";
   className?: string;
   isProject?: boolean;
+  variant?: "default" | "minimal";
   onClick?: () => void;
 }
 
@@ -22,15 +23,17 @@ export const AppIcon = ({
   size = "md",
   className,
   isProject = false,
+  variant = "default",
   onClick,
 }: AppIconProps) => {
   return (
     <div
       className={cn(
-        "relative rounded-[22%] overflow-hidden transition-all duration-300 cursor-pointer",
-        "shadow-app-icon hover:shadow-app-icon-hover hover:scale-110",
+        "relative rounded-[22%] overflow-hidden transition-all duration-300",
+        variant === "default" && "shadow-app-icon hover:shadow-app-icon-hover",
+        variant === "default" && isProject && "ring-2 ring-primary ring-offset-2 ring-offset-background",
+        variant === "default" && "cursor-pointer hover:scale-110",
         sizeClasses[size],
-        isProject && "ring-2 ring-primary ring-offset-2 ring-offset-background",
         className
       )}
       onClick={onClick}
