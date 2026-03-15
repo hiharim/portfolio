@@ -1,61 +1,26 @@
-import { Blocks, Code2, Smartphone, Wrench } from "lucide-react";
 import { motion } from "motion/react";
-import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 interface SkillCategory {
   title: string;
   subtitle: string;
-  icon: ReactNode;
-  gradient: string;
-  iconColor: string;
   items: string[];
 }
-
-const categoryMeta = [
-  {
-    icon: <Smartphone className="w-6 h-6" />,
-    gradient: "from-[#027DFD]/18 to-[#54C5F8]/12",
-    iconColor: "text-[#027DFD] bg-[#027DFD]/15",
-  },
-  {
-    icon: <Code2 className="w-6 h-6" />,
-    gradient: "from-[#027DFD]/14 to-[#54C5F8]/8",
-    iconColor: "text-[#0288D1] bg-[#0288D1]/12",
-  },
-  {
-    icon: <Blocks className="w-6 h-6" />,
-    gradient: "from-[#027DFD]/10 to-[#54C5F8]/6",
-    iconColor: "text-[#039BE5] bg-[#039BE5]/10",
-  },
-  {
-    icon: <Wrench className="w-6 h-6" />,
-    gradient: "from-[#027DFD]/4 to-[#54C5F8]/2",
-    iconColor: "text-[#4FC3F7] bg-[#4FC3F7]/8",
-  },
-];
 
 export function Skills() {
   const { t } = useTranslation();
 
-  const skillCategoriesData = t("skills.categories", {
+  const skillCategories: SkillCategory[] = t("skills.categories", {
     returnObjects: true,
   }) as any[];
 
-  const skillCategories: SkillCategory[] = skillCategoriesData.map(
-    (category, index) => ({
-      ...category,
-      ...categoryMeta[index % categoryMeta.length],
-    })
-  );
-
   return (
     <section className="container mx-auto px-4 py-24 max-w-6xl">
-      <div className="mb-12">
-        <p className="text-sm font-semibold text-primary/80 uppercase tracking-widest mb-2">
+      <div className="flex flex-col items-center text-center mb-16">
+        <div className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-muted-foreground text-[10px] font-bold uppercase tracking-widest mb-4">
           {t("skills.expertise")}
-        </p>
-        <h2 className="text-4xl font-bold tracking-tight">
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
           {t("sections.skills")}
         </h2>
       </div>
@@ -68,29 +33,19 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1, duration: 0.5 }}
-            className={`group relative bg-gradient-to-br ${category.gradient} rounded-3xl p-6 border border-border/50 hover:border-border transition-all duration-500 hover:shadow-xl hover:-translate-y-2`}
+            className="flex flex-col p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800/50 bg-zinc-50/30 dark:bg-zinc-900/10"
           >
-            <div className="flex flex-col items-start gap-4 mb-6">
-              <div
-                className={`flex items-center justify-center w-12 h-12 rounded-2xl ${category.iconColor} transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm`}
-              >
-                {category.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-bold text-foreground leading-tight">
-                  {category.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {category.subtitle}
-                </p>
-              </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-foreground">
+                {category.title}
+              </h3>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2.5 mt-auto">
               {category.items.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1.5 text-xs font-semibold rounded-xl bg-background/80 text-foreground/80 border border-border/40 shadow-sm"
+                  className="px-3.5 py-1.5 text-sm font-medium rounded-xl bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700 shadow-sm"
                 >
                   {skill}
                 </span>

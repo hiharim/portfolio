@@ -27,10 +27,15 @@ export function SideProjects() {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="text-center mb-12">
-        <h2 className="mb-4">사이드 프로젝트</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+    <section className="container mx-auto px-4 py-24 max-w-6xl">
+      <div className="flex flex-col items-center text-center mb-16">
+        <div className="px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-4">
+          Experiments
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          사이드 프로젝트
+        </h2>
+        <p className="text-muted-foreground text-base max-w-lg">
           새로운 기술을 탐구하고 실험하며 만든 개인 프로젝트들입니다.
         </p>
       </div>

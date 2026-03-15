@@ -16,15 +16,15 @@ export function Resume() {
     }>;
 
     return (
-        <section className="container mx-auto px-4 py-16 max-w-6xl">
-            <div className="mb-10">
-                <p className="text-sm font-semibold text-primary/80 uppercase tracking-widest mb-2">
-                    Experience
-                </p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                    {t('sections.workExperience')}
-                </h2>
-            </div>
+    <section className="container mx-auto px-4 py-24 max-w-6xl">
+      <div className="flex flex-col items-center text-center mb-16">
+        <div className="px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-4">
+          Experience
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          {t("sections.workExperience")}
+        </h2>
+      </div>
 
             <div className="space-y-8 mb-12">
                 {experiences.map((exp, index) => (

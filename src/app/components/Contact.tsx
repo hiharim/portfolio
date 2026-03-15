@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -32,19 +33,20 @@ const contactLinks = [
 ];
 
 export function Contact() {
+  const { t } = useTranslation();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert("메시지가 전송되었습니다!");
   };
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="mb-10">
-        <p className="text-sm font-semibold text-primary/80 uppercase tracking-widest mb-2">
-          Contact
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-          연락하기
+    <section className="container mx-auto px-4 py-24 max-w-6xl">
+      <div className="flex flex-col items-center text-center mb-16">
+        <div className="px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-4">
+          Get in Touch
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          {t("nav.contact")}
         </h2>
       </div>
 

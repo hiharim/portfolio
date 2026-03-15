@@ -57,8 +57,7 @@ export function HomePage() {
                         <div className="flex gap-5 items-center">
                             <Link
                                 to="/career"
-                                className={`inline-flex items-center justify-center font-bold text-white bg-primary rounded-full hover:brightness-110 transition-all duration-300 shadow-sm hover:shadow-md ${isScrolled ? "text-[10px] px-3 py-1.5" : "text-xs px-4 py-2"
-                                    }`}
+                                className={`hover:text-primary font-medium transition-all duration-300 ${isScrolled ? "text-xs" : "text-sm"}`}
                             >
                                 {t('nav.careerDescription')}
                             </Link>
