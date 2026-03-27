@@ -15,8 +15,8 @@ interface ProjectModalProps {
     description: string;
     image: string;
     tags: string[];
-    github: string;
-    demo: string;
+    github?: string;
+    demo?: string;
     fullDescription?: string;
     problemSolvings?: {
       problem: string;
@@ -30,6 +30,7 @@ interface ProjectModalProps {
     screenshots?: string[];
     architecture?: string;
     achievements?: string[];
+    role?: string;
   } | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -163,7 +164,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
               <div className="space-y-8">
                 <div className="border-b pb-6">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">ROLE</p>
-                  <p className="font-medium">Mobile Developer</p>
+                  <p className="font-medium">{project.role}</p>
                 </div>
 
                 {project.duration && (
@@ -200,20 +201,26 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
               </div>
 
               {/* Links */}
-              <div className="flex flex-col gap-3">
-                <Button className="w-full h-11" asChild>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Visit Live Demo
-                  </a>
-                </Button>
-                <Button variant="outline" className="w-full h-11" asChild>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    View Source Code
-                  </a>
-                </Button>
-              </div>
+              {((project.demo && project.demo !== "#") || (project.github && project.github !== "#")) && (
+                <div className="flex flex-col gap-3">
+                  {project.demo && project.demo !== "#" && (
+                    <Button className="w-full h-11" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Visit Live Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.github && project.github !== "#" && (
+                    <Button variant="outline" className="w-full h-11" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        View Source Code
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              )}
 
               {/* Share/Extra (Optional) */}
               <div className="pt-6 border-t text-sm text-center text-muted-foreground">
