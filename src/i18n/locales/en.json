@@ -3,7 +3,7 @@
         "backToPortfolio": "Back to Portfolio",
         "downloadPDF": "Download PDF",
         "portfolio": "Portfolio",
-        "careerDescription": "Career Description",
+        "careerDescription": "Resume",
         "experience": "Experience",
         "skills": "Skills",
         "projects": "Projects",
@@ -12,7 +12,7 @@
         "contact": "Contact"
     },
     "footer": {
-        "copyright": "© 2024 Mobile App Developer Portfolio. All rights reserved."
+        "copyright": "© 2021 Mobile App Developer Portfolio. All rights reserved."
     },
     "status": {
         "current": "Current"
@@ -25,10 +25,10 @@
     },
     "sections": {
         "workExperience": "Work Experience",
-        "workExperienceDescription": "6+ years of specialized mobile development experience building scalable applications.",
+        "workExperienceDescription": "",
         "motivation": "Motivation",
-        "selfIntroduction": "About Me",
-        "projects": "Key Projects",
+        "selfIntroduction": "Introduction",
+        "projects": "Projects",
         "education": "Education",
         "certifications": "Certifications",
         "languages": "Languages",
@@ -39,7 +39,7 @@
         "categories": [
             {
                 "title": "Mobile Frameworks",
-                "subtitle": "Cross-platform Mobile Development",
+                "subtitle": "Cross-platform Mobile App Development",
                 "items": ["Flutter", "Android (Kotlin)", "Jetpack Compose"]
             },
             {
@@ -49,25 +49,28 @@
             },
             {
                 "title": "State & Architecture",
-                "subtitle": "Patterns & State Management",
+                "subtitle": "State Management & Architecture Patterns",
                 "items": ["Riverpod", "Provider", "MVVM", "Clean Architecture"]
             },
             {
                 "title": "DevOps & Tools",
-                "subtitle": "Development & Deployment Tools",
+                "subtitle": "Development Tools & Deployment Environment",
                 "items": ["Git", "CI/CD", "Sentry", "Figma", "App Store Deploy"]
             }
         ]
     },
     "workExperience": [
         {
-            "company": "Company Name 1",
-            "period": "2023.01 - Present",
-            "position": "Senior Flutter Developer",
+            "company": "Bidan PopPop Inc.",
+            "period": "2024.10 - Present",
+            "position": "Flutter Developer",
             "achievements": [
-                "Achievement 1",
-                "Achievement 2",
-                "Achievement 3"
+                "Developed and operated mobile (Flutter) for a blockchain-based NFT gift card e-commerce app",
+                "Gradually applied Riverpod focusing on new features within the existing Provider-based architecture, separating state and logic",
+                "Designed and implemented core commerce domain logic (purchase, gifting, exchange): Designed and implemented various commerce scenarios including regular purchases, gifting (with message cards), and item exchanges",
+                "Tracked and analyzed crashes/runtime issues using Sentry, managing fixes and verification through to production",
+                "Deployed test builds and supported QA via TestFlight / Firebase App Distribution (release/deployment management, feedback integration)",
+                "Implemented iOS/Android permission and contacts native integration (Flutter MethodChannel) and WebView JS Bridge-based app routing"
             ],
             "location": "Seoul, South Korea",
             "type": "Full-time",
@@ -79,13 +82,16 @@
             ]
         },
         {
-            "company": "Company Name 2",
-            "period": "2021.01 - 2022.12",
-            "position": "Flutter Developer",
+            "company": "Quagga Inc.",
+            "period": "2022.02 - 2023.06",
+            "position": "Android/Flutter Developer",
             "achievements": [
-                "Achievement 1",
-                "Achievement 2",
-                "Achievement 3"
+                "Developed and operated mobile apps targeting Philippines Cebu local government/enterprises/tourists at a blockchain startup",
+                "Migrated existing iOS (Swift) and Android (Kotlin) apps to Flutter, reducing maintenance costs",
+                "Participated in planning and design processes during the initial project phase, refining requirements",
+                "Collaborated with the CS team to prioritize user complaints and bugs for rapid improvement",
+                "Operated Jenkins-based automated build/test and weekly deployment cycles",
+                "Managed multi-department/multi-person (~17 members) collaboration and schedule/issue tracking using Asana/Notion"
             ],
             "location": "Seoul, South Korea",
             "type": "Full-time",
@@ -93,24 +99,23 @@
                 "Android",
                 "Kotlin",
                 "Flutter",
-                "Dart",
-                "Socket.io"
+                "Dart"
             ]
         }
     ],
     "motivation": {
-        "content": "I have a deep passion for delivering better value to users through technology.\nI find fulfillment in optimizing user experiences and building stable services in the constantly evolving mobile ecosystem.\nI am applying to grow alongside your company's innovative vision and contribute to the success of your services by leveraging my technical expertise."
+        "content": "During the development of cryptocurrency wallet and commerce apps, I designed architectures suited to data characteristics by separately applying REST and WebSocket.\nBased on this experience, I am applying to contribute in environments where stable data processing and user experience are critical."
     },
     "selfIntroduction": {
-        "content": "As a mobile developer with 6 years of experience, I specialize in Flutter and Native Android development.\nI have proactively led projects in various environments, from startups to growing organizations,\nwith particular strengths in architecture design aimed at improving code quality and development productivity.\nI value smooth communication with team members and want to contribute to creating a culture of mutual growth."
+        "content": "I led the Flutter migration and structural redesign of Android native apps, performing state management and rendering optimization for blockchain wallet and commerce services. I am a developer who analyzes problems based on data and resolves them in verifiable ways within production environments."
     },
     "projects": {
-        "showcaseDescription": "Explore a collection of mobile applications that define excellence in user experience and technical robustness.",
+        "showcaseDescription": "Introducing key projects.",
         "poppop": {
             "title": "PopPop",
             "period": "2024.10 ~ (Flutter)",
             "contribution": "100%",
-            "description": "Gift card trading and commerce app",
+            "description": "Gift Card NFT Trading and Commerce App",
             "fullDescription": "A platform where users can purchase, exchange, and gift various gift cards.",
             "image": "images/projects/poppop/thumbnail_poppop.jpg",
             "tags": [
@@ -123,7 +128,7 @@
             "github": "#",
             "demo": "#",
             "duration": "2024.10 ~",
-            "team": "2 (Flutter Developer)",
+            "team": "2 (Flutter Developers)",
             "rating": "4.8/5.0",
             "screenshots": [
                 "images/projects/poppop/poppop_1.jpeg",
@@ -138,30 +143,32 @@
                 },
                 {
                     "problem": "Scroll jank occurred on list screens that loaded many images, degrading user experience.",
-                    "solution": "Integrated cached_network_image with a dedicated image resizing cache server, optimizing scroll performance to 60fps.",
+                    "solution": "Integrated cached_network_image with a dedicated image resizing cache server to optimize scroll performance to 60fps.",
                     "conclusion": "Gained experience in building stable payment systems even under high traffic conditions."
                 },
                 {
-                    "problem": "Expanding features was difficult due to complex state management.",
+                    "problem": "Feature expansion was difficult due to complex state management.",
                     "solution": "Modularized state management logic to maximize reusability.",
-                    "conclusion": "Achievements include a crash rate reduction to under 0.1% after refactoring."
+                    "conclusion": "Achieved a crash rate reduction to under 0.1% after refactoring."
                 }
             ],
             "achievements": [
-                "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
-                "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
-                "Integrated Toss Payments and implemented payment verification logic",
-                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic",
-                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic",
-                "Built a stable payment system by integrating Toss Payments and implementing payment verification logic"
+                "Migrated from Provider-based state management (designed around wallet) to Riverpod to address structural limitations caused by commerce domain expansion, building a consistent architecture for complex state flows",
+                "Identified business logic tightly coupled to a specific payment provider during payment SDK migration, and redesigned with a strategy pattern-based payment engine abstraction to enable easy multi-payment method expansion",
+                "Built a custom paging layer based on Riverpod Family with key caching, prefetching, and debounce strategies to resolve paging performance degradation and initial loading delays in product list queries, achieving 3-6x average and up to 10x initial performance improvement",
+                "Resolved infinite loading issue on Home API caused by external payment domain issues using local cache-based fallback structure, implementing a system that ensures data exposure during outages and re-synchronization after recovery",
+                "Eliminated computational overhead by memoization-caching image ratio calculation results during home banner rendering, improving scroll processing speed by up to 11x and enhancing home screen banner rendering performance",
+                "Designed JWT and wallet security data storage system based on flutter_secure_storage (iOS Keychain / Android Keystore)",
+                "Managed QA build deployment and internal test processes using Firebase App Distribution and TestFlight",
+                "Continuously updated features and maintained operations for services published on Google Play and App Store"
             ]
         },
         "cpass": {
             "title": "CPASS",
             "period": "2022.09 ~ 2023.06 (Flutter)",
             "contribution": "80%",
-            "description": "Rediscovered and launched existing native Android app in Flutter with design renewal, chat, and coin trading features.",
-            "fullDescription": "Remade the existing native Android app with Flutter, adding features like chat and coin trading while renewing the UI/UX.",
+            "description": "Rebuilt and launched the existing native Android app in Flutter with design renewal, chat, coin trading, and community features",
+            "fullDescription": "Rebuilt and launched the existing native Android app in Flutter with design renewal, adding chat, coin trading, and community features for a complete renewal.",
             "image": "images/projects/cpass/thumbnail_cpass.jpeg",
             "tags": [
                 "Flutter",
@@ -192,26 +199,27 @@
                     "conclusion": "Acquired deep domain knowledge by re-analyzing existing business logic during the migration process."
                 },
                 {
-                    "problem": "Performance issues occurred when processing large amounts of data.",
-                    "solution": "Integrated Hive DB to optimize local data caching.",
+                    "problem": "Performance degradation occurred when processing large volumes of data.",
+                    "solution": "Introduced Hive DB to optimize local data caching.",
                     "conclusion": "Greatly contributed to reducing maintenance costs."
                 }
             ],
             "achievements": [
-                "Migrated existing native app to Flutter, improving development productivity by 200%",
-                "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Established foundation for global service expansion by building multi-language support (i18n) system"
+                "Custom-built user balance (donut) and price fluctuation (line) charts using CustomPainter directly without external library dependencies",
+                "Implemented coin charging functionality by integrating the Next Pay payment system",
+                "Implemented KYC (Know Your Customer) authentication to verify user identity and strengthen security",
+                "Implemented push notification functionality using FCM (Firebase Cloud Messaging)",
+                "Designed and implemented an onboarding process consisting of welcome screens, tutorials, and tooltips for new users using mock data, guiding them through the app's key features and usage",
+                "Developed reusable chat UI components using CustomPainter and Matrix4 transformations to overcome structural limitations of implementing complex speech bubble UI with basic widget combinations",
+                "Applied multi-language support (Localization) for Korean, English, Chinese, Japanese, and multi-currency support for USD, KRW, JPY, PHP"
             ]
         },
         "brk": {
             "title": "BRK Foundation",
             "period": "2023.02 ~ 2023.03 (Flutter)",
             "contribution": "70%",
-            "description": "Philippine NGO donation app with coin donation and tracking features.",
-            "fullDescription": "A platform for a Philippine NGO that allows donations via coins and aggregates donation amounts.",
+            "description": "Philippine NGO foundation app providing coin donation and donation amount aggregation features",
+            "fullDescription": "A Philippine NGO foundation app providing coin donation and donation amount aggregation features.",
             "image": "images/projects/brk/thumbnail_brk.jpg",
             "tags": [
                 "Flutter",
@@ -222,7 +230,7 @@
             "github": "#",
             "demo": "#",
             "duration": "3 months",
-            "team": "2 (Flutter Developer)",
+            "team": "2 (Flutter Developers)",
             "rating": "4.7/5.0",
             "screenshots": [
                 "images/projects/brk/brk_1.jpg",
@@ -231,36 +239,35 @@
             ],
             "problemSolvings": [
                 {
-                    "problem": "Rendering performance issues and excessive memory usage occurred when displaying thousands of donation locations on a map at once.",
+                    "problem": "Rendering performance degradation and excessive memory usage occurred when displaying thousands of donation location data on a map simultaneously.",
                     "solution": "Adopted Google Maps Clustering (ClusterManager) to group markers based on zoom level, minimizing rendering load.",
                     "conclusion": "A project where I learned how technology can contribute to creating actual social value."
                 },
                 {
                     "problem": "Data loading failures were frequent due to poor local network environments.",
-                    "solution": "Applied Retry Interceptor to Retrofit and local caching in Room DB for critical data, implementing an Offline-First architecture.",
+                    "solution": "Applied Retry Interceptor to Retrofit and locally cached critical data in Room DB, implementing an Offline-First architecture.",
                     "conclusion": "Secured technical capability in optimizing and integrating Geographic Information Systems (GIS) into mobile apps."
                 },
                 {
                     "problem": "The complex donation process needed to be simplified.",
-                    "solution": "Streamlined the donation process step-by-step considering User Experience (UX).",
+                    "solution": "Streamlined the donation process step-by-step with User Experience (UX) considerations.",
                     "conclusion": "Experienced the importance of Offline-First architecture firsthand."
                 }
             ],
             "achievements": [
-                "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
-                "Ensured app usability even in unstable network environments by introducing offline-first architecture",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors"
+                "Integrated Google Maps API to provide location-based services with custom markers and clustering functionality to display donated regions",
+                "Implemented functionality to render dynamically fetched HTML content from the server naturally in the app UI using WebView with dynamic height adjustment",
+                "Implemented app launch and specific page navigation through Firebase Dynamic Links",
+                "Improved reusability and development efficiency by componentizing widgets such as buttons, snackbars, bottom sheets, text input fields, switch buttons, and dialogs",
+                "Implemented social login functionality for Google, Apple, Facebook, Line, and more"
             ]
         },
         "digiLab": {
             "title": "DigiLab",
             "period": "2022.02 ~ 2022.08 (Android)",
             "contribution": "100%",
-            "description": "Blockchain wallet providing wallet creation, remittance, swap, and QR payment.",
-            "fullDescription": "Comprehensive mobile wallet app for blockchain assets.",
+            "description": "Blockchain wallet providing comprehensive coin wallet features including wallet creation, remittance, swap, and QR payment",
+            "fullDescription": "A blockchain wallet providing comprehensive coin wallet features including wallet creation, remittance, swap, and QR payment.",
             "image": "images/projects/digilab/thumbnail_digilab.png",
             "tags": [
                 "Android",
@@ -282,28 +289,28 @@
             ],
             "problemSolvings": [
                 {
-                    "problem": "Blockchain transaction processing is asynchronous and has a high probability of failure, making it difficult to give clear feedback to users.",
-                    "solution": "Implemented a state machine that polls transaction status and reflects progress in real-time in the UI.",
-                    "conclusion": "Gained a deep understanding of the Android framework by building a fintech app requiring high security and reliability from scratch by myself."
+                    "problem": "Blockchain transaction processing is asynchronous with a high probability of failure, making it difficult to provide clear feedback to users.",
+                    "solution": "Implemented a state machine that polls asynchronous transaction status and reflects step-by-step progress in the UI in real-time.",
+                    "conclusion": "Gained a deep understanding of the Android framework by building a fintech app requiring high security and reliability from scratch single-handedly."
                 },
                 {
-                    "problem": "Security requirements for managing private keys and mnemonic codes safely were extremely demanding.",
+                    "problem": "Security requirements for safely managing private keys and mnemonic codes were extremely demanding.",
                     "solution": "Used Android Keystore System to encrypt and store sensitive data, and applied rooting detection and screen capture prevention.",
-                    "conclusion": "Felt great reward in advancing the app by reflecting user feedback after launch."
+                    "conclusion": "Felt great reward in advancing the app by incorporating user feedback after launch."
                 },
                 {
-                    "problem": "Performance degradation was expected due to complex encryption logic.",
+                    "problem": "Performance degradation was anticipated due to complex encryption logic processing.",
                     "solution": "Handled encryption tasks on background threads to maintain UI responsiveness.",
                     "conclusion": "Deeply recognized the importance of secure coding."
                 }
             ],
             "achievements": [
-                "Migrated native app logic to modern architecture",
-                "Implemented real-time transaction monitoring",
-                "Retrofit and Dio interceptors for robust error handling",
-                "Retrofit and Dio interceptors for robust error handling",
-                "Retrofit and Dio interceptors for robust error handling",
-                "Established global service expansion foundation"
+                "Integrated RESTful APIs for various coin payment processes (remittance, swap, charging, withdrawal, escrow, QR payment) into the client app",
+                "Implemented sign-up and login functionality supporting multiple authentication methods including email, PIN, biometric, Google, and Apple",
+                "Implemented duplicate login prevention using JWT tokens",
+                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
+                "Improved code reusability and maintainability using MVVM architecture",
+                "Achievement: Built and launched a new blockchain wallet service on Google Play Store"
             ]
         }
     },
@@ -334,31 +341,25 @@
         }
     ],
     "education": {
-        "university": "University Name",
-        "period": "2016.03 - 2022.02",
-        "degree": "Bachelor of Computer Science"
+        "university": "Kangwon National University",
+        "period": "2016.03 - 2020.02",
+        "degree": "Department of Information Statistics"
     },
     "certifications": {
         "items": [
             {
-                "name": "Information Processing Engineer (정보처리기사)",
-                "date": "2022.06"
-            },
-            {
-                "name": "SQLD (SQL Developer)",
-                "date": "2021.09"
+                "name": "Survey Analyst Level 2",
+                "date": "2018.08",
+                "organization": "Human Resources Development Service of Korea"
             }
         ]
     },
     "languageScores": {
         "items": [
             {
-                "name": "OPIc",
-                "score": "IM2 (2023.05)"
-            },
-            {
                 "name": "TOEIC",
-                "score": "850 (2022.12)"
+                "score": "905 (2019.02)",
+                "organization": "YBM"
             }
         ]
     }
