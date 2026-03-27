@@ -147,12 +147,6 @@
                     "conclusion": "Achievements include a crash rate reduction to under 0.1% after refactoring."
                 }
             ],
-            "contributions": [
-                "Global state management and business logic separation using Riverpod",
-                "Deep link handling and navigation structure design using GoRouter",
-                "Push notification system implementation based on Firebase Cloud Messaging (FCM)",
-                "Integration of complex payment processes and external payment modules"
-            ],
             "achievements": [
                 "Introduced Riverpod state management to perfectly separate and modularize complex payment logic into business logic and UI",
                 "Optimized list scrolling performance to maintain 60fps by introducing image caching and resizing server",
@@ -203,12 +197,6 @@
                     "conclusion": "Greatly contributed to reducing maintenance costs."
                 }
             ],
-            "contributions": [
-                "Migrated existing Android native app to Flutter",
-                "Implemented real-time chat using WebSocket",
-                "Supported local data caching and offline mode using Hive DB",
-                "Applied multi-language support (i18n) for global service"
-            ],
             "achievements": [
                 "Migrated existing native app to Flutter, improving development productivity by 200%",
                 "Built real-time chat system based on Socket.io and implemented offline message queuing to prevent data loss",
@@ -257,12 +245,6 @@
                     "solution": "Streamlined the donation process step-by-step considering User Experience (UX).",
                     "conclusion": "Experienced the importance of Offline-First architecture firsthand."
                 }
-            ],
-            "contributions": [
-                "RESTful API communication module design using Retrofit",
-                "Google Maps API integration and custom marker clustering",
-                "App performance optimization and memory leak prevention",
-                "Animation and interaction implementation for UX improvement"
             ],
             "achievements": [
                 "Optimized rendering performance of thousands of markers by applying Google Maps Clustering",
@@ -314,12 +296,6 @@
                     "solution": "Handled encryption tasks on background threads to maintain UI responsiveness.",
                     "conclusion": "Deeply recognized the importance of secure coding."
                 }
-            ],
-            "contributions": [
-                "Development productivity improved by 200% by migrating to Android modern patterns",
-                "Asynchronous task processing and UI thread optimization using Coroutine",
-                "Blockchain wallet creation and transaction processing logic implementation",
-                "Biometric authentication (Fingerprint, FaceID) integration"
             ],
             "achievements": [
                 "Migrated native app logic to modern architecture",

@@ -29,7 +29,7 @@ interface ProjectModalProps {
     rating?: string;
     screenshots?: string[];
     architecture?: string;
-    contributions?: string[];
+    achievements?: string[];
   } | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -79,14 +79,14 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 </div>
               )}
 
-              {/* Contributions */}
-              {project.contributions && project.contributions.length > 0 && (
+              {/* Achievements */}
+              {project.achievements && project.achievements.length > 0 && (
                 <div className="mb-12">
-                  <h3 className="text-xl font-bold mb-4">My Contributions</h3>
+                  <h3 className="text-xl font-bold mb-4">Achievements</h3>
                   <ul className="space-y-3 list-disc pl-5">
-                    {project.contributions.map((contribution, index) => (
+                    {project.achievements.map((achievement, index) => (
                       <li key={index} className="text-muted-foreground leading-relaxed pl-1 marker:text-primary">
-                        {contribution}
+                        {achievement}
                       </li>
                     ))}
                   </ul>
