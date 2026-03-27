@@ -7,7 +7,6 @@
         "experience": "Experience",
         "skills": "Skills",
         "projects": "Projects",
-        "sideProjects": "Side Projects",
         "credentials": "Credentials",
         "contact": "Contact"
     },
@@ -18,7 +17,8 @@
         "current": "Current"
     },
     "profile": {
-        "name": "Harim Cho (조하림)",
+        "name": "Harim Cho",
+        "photo": "images/profile.jpeg",
         "title": "Mobile App Developer",
         "email": "hastein96@gmail.com",
         "location": "Seoul, Korea"
@@ -32,7 +32,7 @@
         "education": "Education",
         "certifications": "Certifications",
         "languages": "Languages",
-        "skills": "Technical Stack"
+        "skills": "Tech Stack"
     },
     "skills": {
         "expertise": "Expertise",
@@ -40,22 +40,41 @@
             {
                 "title": "Mobile Frameworks",
                 "subtitle": "Cross-platform Mobile App Development",
-                "items": ["Flutter", "Android (Kotlin)", "Jetpack Compose"]
+                "items": [
+                    "Flutter",
+                    "Android (Kotlin)",
+                    "Jetpack Compose"
+                ]
             },
             {
                 "title": "Languages",
                 "subtitle": "Core Programming Languages",
-                "items": ["Dart", "Kotlin", "Java"]
+                "items": [
+                    "Dart",
+                    "Kotlin",
+                    "Java"
+                ]
             },
             {
                 "title": "State & Architecture",
                 "subtitle": "State Management & Architecture Patterns",
-                "items": ["Riverpod", "Provider", "MVVM", "Clean Architecture"]
+                "items": [
+                    "Riverpod",
+                    "Provider",
+                    "MVVM",
+                    "Clean Architecture"
+                ]
             },
             {
                 "title": "DevOps & Tools",
-                "subtitle": "Development Tools & Deployment Environment",
-                "items": ["Git", "CI/CD", "Sentry", "Figma", "App Store Deploy"]
+                "subtitle": "Development Tools & Deployment Environments",
+                "items": [
+                    "Git",
+                    "CI/CD",
+                    "Sentry",
+                    "Figma",
+                    "App Store Deploy"
+                ]
             }
         ]
     },
@@ -104,7 +123,7 @@
         }
     ],
     "motivation": {
-        "content": "During the development of cryptocurrency wallet and commerce apps, I designed architectures suited to data characteristics by separately applying REST and WebSocket.\nBased on this experience, I am applying to contribute in environments where stable data processing and user experience are critical."
+        "content": "During the development of cryptocurrency wallet and commerce apps, I designed architectures suited to data characteristics by separately applying REST and WebSocket.\nBased on this experience, I applied to contribute in environments where stable data processing and user experience are critical."
     },
     "selfIntroduction": {
         "content": "I led the Flutter migration and structural redesign of Android native apps, performing state management and rendering optimization for blockchain wallet and commerce services. I am a developer who analyzes problems based on data and resolves them in verifiable ways within production environments."
@@ -114,9 +133,9 @@
         "poppop": {
             "title": "PopPop",
             "period": "2024.10 ~ (Flutter)",
-            "contribution": "100%",
+            "contribution": "60%",
             "description": "Gift Card NFT Trading and Commerce App",
-            "fullDescription": "A platform where users can purchase, exchange, and gift various gift cards.",
+            "fullDescription": "A platform where users can purchase, exchange, and gift gift cards",
             "image": "images/projects/poppop/thumbnail_poppop.jpg",
             "tags": [
                 "Flutter",
@@ -125,50 +144,48 @@
                 "goRouter",
                 "mockito"
             ],
-            "github": "#",
-            "demo": "#",
             "duration": "2024.10 ~",
-            "team": "2 (Flutter Developers)",
-            "rating": "4.8/5.0",
+            "team": "2 Members (Flutter Developers)",
             "screenshots": [
                 "images/projects/poppop/poppop_1.jpeg",
                 "images/projects/poppop/poppop_2.jpeg",
                 "images/projects/poppop/poppop_3.jpeg"
             ],
+            "role": "Flutter Developer",
             "problemSolvings": [
                 {
-                    "problem": "In the existing MVC pattern, the UI and business logic were tightly coupled, causing UI code to be affected whenever payment logic was modified.",
-                    "solution": "Introduced Riverpod + ViewModel pattern to strictly separate UI and logic. Managed payment logic as a separate Provider to improve maintainability.",
-                    "conclusion": "Gained a deep understanding of the importance of state management patterns through this project."
+                    "problem": "The structure was separated by payment providers, causing repeated UI and business logic modifications when changing payment providers, making testing and maintenance difficult",
+                    "solution": "Separated payment logic from the UI layer and introduced a strategy pattern-based payment engine, abstracting to a common interface to allow independent replacement of payment provider implementations",
+                    "conclusion": "Enabled response to payment provider changes simply by replacing the engine without modifying screens, improving testing ease and code reusability"
                 },
                 {
-                    "problem": "Scroll jank occurred on list screens that loaded many images, degrading user experience.",
-                    "solution": "Integrated cached_network_image with a dedicated image resizing cache server to optimize scroll performance to 60fps.",
-                    "conclusion": "Gained experience in building stable payment systems even under high traffic conditions."
+                    "problem": "Inefficient paging structure when querying product lists caused loading delays at scroll intervals and decreased response speed upon initial entry",
+                    "solution": "Designed a custom paging layer based on Riverpod Family and applied key caching, prefetching, and debouncing strategies to optimize data request flow",
+                    "conclusion": "Improved retrieval performance by 3-6x on average and up to 10x on initial loading, enhancing the UX of large-volume product lists"
                 },
                 {
-                    "problem": "Feature expansion was difficult due to complex state management.",
-                    "solution": "Modularized state management logic to maximize reusability.",
-                    "conclusion": "Achieved a crash rate reduction to under 0.1% after refactoring."
+                    "problem": "In case of Home API call failure due to server or domain issues, the screen did not transition to an error state, and the loading widget remained continuously visible, leading users to perceive it as an app failure",
+                    "solution": "Introduced 'success / empty / error / stale' state models to the home retrieval logic. Cached the last normal home data in SharedPreferences to display as fallback data during server outages. Also categorized API timeouts and exception types, implementing error screens, stale notification banners, retries, and pull-to-refresh recovery flows",
+                    "conclusion": "Provided clear error guidance and retry UX when no cache was present, and ensured service continuity by instantly displaying stored home data when cache existed. Completed end-to-end verification for a normal transition to the latest data upon subsequent network recovery"
                 }
             ],
             "achievements": [
-                "Migrated from Provider-based state management (designed around wallet) to Riverpod to address structural limitations caused by commerce domain expansion, building a consistent architecture for complex state flows",
-                "Identified business logic tightly coupled to a specific payment provider during payment SDK migration, and redesigned with a strategy pattern-based payment engine abstraction to enable easy multi-payment method expansion",
-                "Built a custom paging layer based on Riverpod Family with key caching, prefetching, and debounce strategies to resolve paging performance degradation and initial loading delays in product list queries, achieving 3-6x average and up to 10x initial performance improvement",
-                "Resolved infinite loading issue on Home API caused by external payment domain issues using local cache-based fallback structure, implementing a system that ensures data exposure during outages and re-synchronization after recovery",
-                "Eliminated computational overhead by memoization-caching image ratio calculation results during home banner rendering, improving scroll processing speed by up to 11x and enhancing home screen banner rendering performance",
+                "Provider-based state management, originally designed around the wallet, faced structural limitations as the commerce domain expanded. Migrated to a Riverpod-based system to handle complex state flows and built a consistent architecture",
+                "Identified business logic tightly coupled to a specific payment provider during payment SDK migration, and redesigned it with a strategy pattern-based payment engine abstraction to create a structure easily expandable to multiple payment methods",
+                "Encountered paging performance degradation and initial loading delays during product list retrieval. Built a custom paging layer based on Riverpod Family, applying key caching, prefetching, and debounce strategies to achieve an average 3-6x and up to 10x initial load performance improvement, optimizing the retrieval of large product lists",
+                "Resolved an infinite loading issue on the Home API caused by external payment domain issues by building a local cache-based fallback structure, ensuring data visibility during outages and re-synchronization post-recovery",
+                "Scroll lag occurred due to repeated image aspect ratio calculations during home banner rendering. Eliminated computation overhead by memoizing and caching ratio calculations, improving scroll processing speed by up to 11x and enhancing home screen banner rendering performance",
                 "Designed JWT and wallet security data storage system based on flutter_secure_storage (iOS Keychain / Android Keystore)",
                 "Managed QA build deployment and internal test processes using Firebase App Distribution and TestFlight",
-                "Continuously updated features and maintained operations for services published on Google Play and App Store"
+                "Continuously updated features and maintained operation of services published on Google Play and App Store"
             ]
         },
         "cpass": {
             "title": "CPASS",
             "period": "2022.09 ~ 2023.06 (Flutter)",
-            "contribution": "80%",
-            "description": "Rebuilt and launched the existing native Android app in Flutter with design renewal, chat, coin trading, and community features",
-            "fullDescription": "Rebuilt and launched the existing native Android app in Flutter with design renewal, adding chat, coin trading, and community features for a complete renewal.",
+            "contribution": "40%",
+            "description": "Rebuilt and launched the existing native Android app in Flutter, adding chat, coin trading, and community features along with a design renewal",
+            "fullDescription": "Rebuilt and launched the existing native Android app in Flutter, adding chat, coin trading, and community features along with a design renewal.",
             "image": "images/projects/cpass/thumbnail_cpass.jpeg",
             "tags": [
                 "Flutter",
@@ -177,40 +194,28 @@
                 "Hive",
                 "Dart"
             ],
-            "github": "#",
-            "demo": "#",
             "duration": "4 months",
-            "team": "2 (2 Flutter Developers)",
-            "rating": "4.6/5.0",
+            "team": "2 Members (2 Flutter Developers)",
             "screenshots": [
                 "images/projects/cpass/cpass_1.png",
                 "images/projects/cpass/cpass_2.png",
                 "images/projects/cpass/cpass_3.png"
             ],
+            "role": "Flutter Developer",
             "problemSolvings": [
                 {
-                    "problem": "The existing native app was difficult to maintain and required separate development staff for iOS/Android, resulting in low cost-efficiency.",
-                    "solution": "Adopted Flutter cross-platform to handle both markets with a single codebase, improving development productivity by 200%.",
-                    "conclusion": "A successful case of transitioning legacy code to modern cross-platform technology."
-                },
-                {
-                    "problem": "Frequent WebSocket connection instability occurred when implementing real-time chat.",
-                    "solution": "Implemented Socket.io along with custom reconnection logic and an offline queuing system to prevent message loss.",
-                    "conclusion": "Acquired deep domain knowledge by re-analyzing existing business logic during the migration process."
-                },
-                {
-                    "problem": "Performance degradation occurred when processing large volumes of data.",
-                    "solution": "Introduced Hive DB to optimize local data caching.",
-                    "conclusion": "Greatly contributed to reducing maintenance costs."
+                    "problem": "The existing native app was difficult to maintain and required separate development teams for iOS and Android, resulting in low cost-efficiency.",
+                    "solution": "Introduced the Flutter cross-platform framework, corresponding to both major markets with a single codebase, improving development productivity by 200%.",
+                    "conclusion": "A successful case of transitioning legacy code to modern cross-platform technology"
                 }
             ],
             "achievements": [
-                "Custom-built user balance (donut) and price fluctuation (line) charts using CustomPainter directly without external library dependencies",
+                "Custom-built user balance (donut) and price fluctuation (line) charts using CustomPainter directly, without external library dependencies, for visualization",
                 "Implemented coin charging functionality by integrating the Next Pay payment system",
                 "Implemented KYC (Know Your Customer) authentication to verify user identity and strengthen security",
                 "Implemented push notification functionality using FCM (Firebase Cloud Messaging)",
-                "Designed and implemented an onboarding process consisting of welcome screens, tutorials, and tooltips for new users using mock data, guiding them through the app's key features and usage",
-                "Developed reusable chat UI components using CustomPainter and Matrix4 transformations to overcome structural limitations of implementing complex speech bubble UI with basic widget combinations",
+                "Designed and implemented an onboarding process using mock data, consisting of welcome screens, tutorials, and tooltips to guide new users through key features and app usage",
+                "Developed a reusable chat UI component using CustomPainter and Matrix4 transformations to overcome structural limitations that arise when implementing complex speech bubble UIs with basic widget combinations",
                 "Applied multi-language support (Localization) for Korean, English, Chinese, Japanese, and multi-currency support for USD, KRW, JPY, PHP"
             ]
         },
@@ -218,7 +223,7 @@
             "title": "BRK Foundation",
             "period": "2023.02 ~ 2023.03 (Flutter)",
             "contribution": "70%",
-            "description": "Philippine NGO foundation app providing coin donation and donation amount aggregation features",
+            "description": "A Philippine NGO foundation app providing coin donation and donation amount aggregation features",
             "fullDescription": "A Philippine NGO foundation app providing coin donation and donation amount aggregation features.",
             "image": "images/projects/brk/thumbnail_brk.jpg",
             "tags": [
@@ -227,11 +232,9 @@
                 "Dart",
                 "retrofit"
             ],
-            "github": "#",
-            "demo": "#",
+            "role": "Flutter Developer",
             "duration": "3 months",
-            "team": "2 (Flutter Developers)",
-            "rating": "4.7/5.0",
+            "team": "2 Members (Flutter Developers)",
             "screenshots": [
                 "images/projects/brk/brk_1.jpg",
                 "images/projects/brk/brk_2.jpg",
@@ -239,35 +242,25 @@
             ],
             "problemSolvings": [
                 {
-                    "problem": "Rendering performance degradation and excessive memory usage occurred when displaying thousands of donation location data on a map simultaneously.",
-                    "solution": "Adopted Google Maps Clustering (ClusterManager) to group markers based on zoom level, minimizing rendering load.",
-                    "conclusion": "A project where I learned how technology can contribute to creating actual social value."
-                },
-                {
-                    "problem": "Data loading failures were frequent due to poor local network environments.",
-                    "solution": "Applied Retry Interceptor to Retrofit and locally cached critical data in Room DB, implementing an Offline-First architecture.",
-                    "conclusion": "Secured technical capability in optimizing and integrating Geographic Information Systems (GIS) into mobile apps."
-                },
-                {
-                    "problem": "The complex donation process needed to be simplified.",
-                    "solution": "Streamlined the donation process step-by-step with User Experience (UX) considerations.",
-                    "conclusion": "Experienced the importance of Offline-First architecture firsthand."
+                    "problem": "When creating custom markers, memory usage spiked repeatedly creating bitmap images, causing performance degradation and marker rendering delays",
+                    "solution": "Analyzed marker bitmap creation logic, identified areas for improvement, and modified the logic to store initially created bitmap images in a memory cache for reuse",
+                    "conclusion": "Improved custom marker rendering speed and enhanced map interaction responsiveness by utilizing memory caching and asynchronous processing"
                 }
             ],
             "achievements": [
-                "Integrated Google Maps API to provide location-based services with custom markers and clustering functionality to display donated regions",
-                "Implemented functionality to render dynamically fetched HTML content from the server naturally in the app UI using WebView with dynamic height adjustment",
-                "Implemented app launch and specific page navigation through Firebase Dynamic Links",
-                "Improved reusability and development efficiency by componentizing widgets such as buttons, snackbars, bottom sheets, text input fields, switch buttons, and dialogs",
-                "Implemented social login functionality for Google, Apple, Facebook, Line, and more"
+                "Integrated Google Maps API for a user location-based service that included custom markers and clustering to indicate donated regions",
+                "Implemented functionality to naturally render dynamically fetched HTML content from the server into the app UI using WebView, with dynamic height adjustment",
+                "Implemented app launch and specific page navigation via Firebase Dynamic Links",
+                "Componentized widgets such as buttons, snackbars, bottom sheets, text input fields, switch buttons, and dialogs to improve reusability and development efficiency",
+                "Implemented quick login functionality for Google, Apple, Facebook, Line, etc."
             ]
         },
         "digiLab": {
             "title": "DigiLab",
             "period": "2022.02 ~ 2022.08 (Android)",
             "contribution": "100%",
-            "description": "Blockchain wallet providing comprehensive coin wallet features including wallet creation, remittance, swap, and QR payment",
-            "fullDescription": "A blockchain wallet providing comprehensive coin wallet features including wallet creation, remittance, swap, and QR payment.",
+            "description": "A blockchain wallet providing overall coin wallet features such as wallet creation, remittance, swap, and QR payment",
+            "fullDescription": "A blockchain wallet providing overall coin wallet features such as wallet creation, remittance, swap, and QR payment.",
             "image": "images/projects/digilab/thumbnail_digilab.png",
             "tags": [
                 "Android",
@@ -277,11 +270,9 @@
                 "Retrofit2",
                 "Coroutine"
             ],
-            "github": "#",
-            "demo": "#",
+            "role": "Android Developer",
             "duration": "7 months",
-            "team": "1 (Android Developer)",
-            "rating": "4.5/5.0",
+            "team": "1 Member (Android Developer)",
             "screenshots": [
                 "images/projects/digilab/digilab_1.jpg",
                 "images/projects/digilab/digilab_2.jpg",
@@ -289,28 +280,18 @@
             ],
             "problemSolvings": [
                 {
-                    "problem": "Blockchain transaction processing is asynchronous with a high probability of failure, making it difficult to provide clear feedback to users.",
-                    "solution": "Implemented a state machine that polls asynchronous transaction status and reflects step-by-step progress in the UI in real-time.",
-                    "conclusion": "Gained a deep understanding of the Android framework by building a fintech app requiring high security and reliability from scratch single-handedly."
-                },
-                {
-                    "problem": "Security requirements for safely managing private keys and mnemonic codes were extremely demanding.",
-                    "solution": "Used Android Keystore System to encrypt and store sensitive data, and applied rooting detection and screen capture prevention.",
-                    "conclusion": "Felt great reward in advancing the app by incorporating user feedback after launch."
-                },
-                {
-                    "problem": "Performance degradation was anticipated due to complex encryption logic processing.",
-                    "solution": "Handled encryption tasks on background threads to maintain UI responsiveness.",
-                    "conclusion": "Deeply recognized the importance of secure coding."
+                    "problem": "When the user's coin balance was extreme (very large or very small), it was displayed in exponential notation (e.g., 8E-6), making it difficult to understand intuitively",
+                    "solution": "Utilized the BigDecimal class to implement precise decimal calculation and formatting logic, verifying accuracy and consistency through unit and UI tests",
+                    "conclusion": "Improved the app's reliability and user experience by displaying coin balances clearly and consistently"
                 }
             ],
             "achievements": [
-                "Integrated RESTful APIs for various coin payment processes (remittance, swap, charging, withdrawal, escrow, QR payment) into the client app",
-                "Implemented sign-up and login functionality supporting multiple authentication methods including email, PIN, biometric, Google, and Apple",
-                "Implemented duplicate login prevention using JWT tokens",
-                "Implemented robust error handling and retry logic using Retrofit and Dio interceptors",
-                "Improved code reusability and maintainability using MVVM architecture",
-                "Achievement: Built and launched a new blockchain wallet service on Google Play Store"
+                "Integrated RESTful APIs into the client app for various coin payment processes (remittance, swap, charging, withdrawal, secure transaction, QR payment)",
+                "Implemented sign-up and login functionality with support for multiple login methods, including email, PIN, biometrics, Google, and Apple",
+                "Implemented duplicate login prevention functionality using JWT tokens",
+                "Implemented robust error handling and retry logic utilizing Retrofit and Dio interceptors",
+                "Improved code reusability and maintainability by using the MVVM architecture",
+                "Achievement: Built a new blockchain wallet service and launched it on the Play Store"
             ]
         }
     },
@@ -318,16 +299,19 @@
         {
             "id": "singtogether",
             "title": "SingTogether",
-            "description": "Karaoke App",
+            "description": "Untact Karaoke Service Platform",
             "image": "images/projects/singtogether/thumbnail_singtogether.png",
             "tags": [
-                "Flutter",
-                "Audio",
-                "UI/UX"
+                "Android",
+                "Kotlin",
+                "FFMPEG",
+                "MediaRecorder",
+                "MediaProjection"
             ],
-            "github": "#",
-            "demo": "#",
-            "fullDescription": "A mobile app providing karaoke features.",
+            "role": "Full Stack Developer",
+            "github": "https://github.com/hiharim/SingTogether",
+            "demo": "https://www.youtube.com/watch?v=H9SSHP-i0wI",
+            "fullDescription": "A community app that allows people to enjoy karaoke online regardless of time or location, addressing the difficulties of visiting karaoke rooms due to COVID-19",
             "screenshots": [
                 "images/projects/singtogether/sing_1.png",
                 "images/projects/singtogether/sing_2.png",
@@ -335,9 +319,23 @@
                 "images/projects/singtogether/sing_4.png"
             ],
             "architecture": "images/projects/singtogether/singtogether.svg",
-            "duration": "1 month",
-            "team": "Personal Project",
-            "contribution": "100%"
+            "duration": "4 months",
+            "problemSolvings": [
+                {
+                    "problem": "Client-side video merging using FFMPEG took about 10 minutes due to performance constraints",
+                    "solution": "Improved the system by migrating the video merging task from the client to the server to utilize high-performance server resources",
+                    "conclusion": "Reduced video merging time from 10 minutes to 1 minute"
+                }
+            ],
+            "achievements": [
+                "Transferred video and audio merging logic from Client-side to Server-side, reducing processing time by 90% (10 mins → 1 min)",
+                "Designed the service's main interface: Implement singing, duet participation, real-time MR filtering, and search system",
+                "Precisely implemented lyric synchronization for an immersive user experience",
+                "Built an easy authentication system via Kakao social login and developed community features like liking and posting",
+                "Implemented high-quality audio and video recording and managed media streams"
+            ],
+            "team": "2 Members",
+            "contribution": "50%"
         }
     ],
     "education": {

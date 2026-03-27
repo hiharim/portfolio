@@ -17,7 +17,7 @@
         "current": "현재"
     },
     "profile": {
-        "name": "조하림 (Harim Cho)",
+        "name": "조하림",
         "photo": "images/profile.jpeg",
         "title": "Mobile App Developer",
         "email": "hastein96@gmail.com",
@@ -133,7 +133,7 @@
         "poppop": {
             "title": "팝팝(poppop)",
             "period": "2024.10 ~ (Flutter)",
-            "contribution": "100%",
+            "contribution": "60%",
             "description": "기프트카드 NFT 거래 및 커머스 앱",
             "fullDescription": "사용자들이 기프트카드를 구매하고, 교환하고, 선물할 수 있는 플랫폼",
             "image": "images/projects/poppop/thumbnail_poppop.jpg",
